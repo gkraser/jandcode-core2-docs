@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <web>
+
+        <mount name="my-mount-point-1"
+               virtualPath=""
+               realPath="d:/temp"/>
+
+        <mount name="my-mount-point-2"
+               virtualPath=""
+               realPath="d:/data"/>
+
+        <mount name="my-mount-point-2"
+               virtualPath="data/temp"
+               realPath="#{path}/data-temp"/>
+
+    </web>
+
+</root>

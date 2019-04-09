@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <web>
+        <mount name="NAME"
+               virtualPath="VIRTUAL-PATH"
+               realPath="REAL-PATH"
+               class="jandcode.web.virtfile.IMountProvider"
+        />
+    </web>
+</root>

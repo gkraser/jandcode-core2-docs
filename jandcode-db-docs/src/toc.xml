@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- Основное содержание -->
+    <toc-root topic="index.md">
+        <toc topic="./**/*"/>
+    </toc-root>
+
+</root>

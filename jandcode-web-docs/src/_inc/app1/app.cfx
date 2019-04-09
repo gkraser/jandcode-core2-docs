@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-depends module="jandcode.web"/>
+
+    <web>
+        <gsp name="jc/tag1" path="#{path}/_tag1.gsp"/>
+    </web>
+
+</root>

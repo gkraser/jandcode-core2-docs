@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- Основное содержание -->
+    <toc-root topic="index.md">
+        <toc topic="./get-start"/>
+        <toc topic="./sourcefiles"/>
+        <toc topic="./topic">
+            <toc topic="./topic-md"/>
+            <toc topic="./topic-htm"/>
+        </toc>
+        <toc topic="./toc-xml"/>
+        <toc topic="./markdown"/>
+        <toc topic="./syntax-highlight"/>
+        <toc topic="./ref"/>
+        <toc topic="./cm">
+            <toc topic="./cm-*"/>
+            <toc topic="./cm-custom"/>
+        </toc>
+
+        <toc topic="./ext/index">
+            <toc topic="./cm">
+                <toc topic="./cm-*"/>
+            </toc>
+            <toc topic="./utils">
+                <toc topic="./utils-*"/>
+            </toc>
+            <toc topic="./**/*"/>
+        </toc>
+
+        <toc topic="./**/*"/>
+    </toc-root>
+
+</root>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <web>
+        <action name="my/simple/action"
+                class="web._inc.action.SimpleAction"/>
+    </web>
+</root>

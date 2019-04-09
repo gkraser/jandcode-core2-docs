@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <project>
+
+        <src>
+            <dir1>
+                <dir2>
+                    <file2.md/>
+                </dir2>
+                <file1.md/>
+            </dir1>
+            <empty-folder folder="true"/>
+            <file3.md mark="(from src)"/>
+            <file4.md/>
+        </src>
+
+        <src2>
+            <dir1>
+                <dir3>
+                    <file6.md/>
+                </dir3>
+                <file5.md/>
+            </dir1>
+            <file3.md mark="(from src2)"/>
+            <file7.md/>
+        </src2>
+
+    </project>
+
+</root>

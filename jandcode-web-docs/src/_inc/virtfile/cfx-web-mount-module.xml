@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <web>
+        <mount-module default="BOOL">
+            <!-- особое монтирование в рамках модуля:
+
+                <mount name="NAME"
+                       virtualPath="VIRTUAL-PATH"
+                       realPath="REAL-PATH"
+                />
+
+            -->
+        </mount-module>
+    </web>
+</root>
