@@ -42,6 +42,11 @@ class P extends ProjectScript {
             ant.copy(todir: destDir) {
                 fileset(dir: p.wd("temp/mdoc-doc"))
             }
+            //
+
+            // version
+            makeVersionFile()
+
         }
     }
 
