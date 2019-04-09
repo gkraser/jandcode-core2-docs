@@ -29,20 +29,6 @@ class P extends ProjectScript {
                     "jandcode-core2all-docs",
             ]
         }
-        //
-        include(MDocRootProject).with {
-            projects = [
-//                    load("jandcode-core2-docs"),
-//                    load("jandcode-db-docs"),
-//                    load("jandcode-jsa-docs"),
-//                    load("jandcode-mdoc-docs"),
-//                    load("jandcode-web-docs"),
-            ]
-        }
-
-        afterLoad {
-            //include(MDocRootProject).projects.addAll(include(RootProject).modules)
-        }
     }
 
 }
