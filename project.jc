@@ -1,6 +1,5 @@
 import jandcode.jc.*
 import jandcode.jc.std.*
-import jandcode.mdoc.jc.*
 
 class P extends ProjectScript {
 
@@ -28,6 +27,19 @@ class P extends ProjectScript {
                     "jandcode-web-docs",
                     "jandcode-core2all-docs",
             ]
+        }
+        //
+        include(ThisProductBuilder)
+    }
+
+    static class ThisProductBuilder extends ProductBuilder {
+        void onExec() {
+            Project p = load("jandcode-core2all-docs")
+            p.cm.exec("mdoc-build")
+            //
+            ant.copy(todir: destDir) {
+                fileset(dir: p.wd("temp/mdoc-doc"))
+            }
         }
     }
 
