@@ -1,6 +1,5 @@
 import jandcode.jc.*
 import jandcode.jc.std.*
-import jandcode.mdoc.jc.*
 
 class P extends ProjectScript {
 
@@ -30,18 +29,24 @@ class P extends ProjectScript {
             ]
         }
         //
-        include(MDocRootProject).with {
-            projects = [
-//                    load("jandcode-core2-docs"),
-//                    load("jandcode-db-docs"),
-//                    load("jandcode-jsa-docs"),
-//                    load("jandcode-mdoc-docs"),
-//                    load("jandcode-web-docs"),
-            ]
-        }
+        include(ThisProductBuilder)
+    }
 
-        afterLoad {
-            //include(MDocRootProject).projects.addAll(include(RootProject).modules)
+    static class ThisProductBuilder extends ProductBuilder {
+        void onExec() {
+            cm.exec("prepare")
+            //
+            Project p = load("jandcode-core2all-docs")
+            p.cm.exec("mdoc-build")
+            //
+            ant.copy(todir: destDir) {
+                fileset(dir: p.wd("temp/mdoc-doc"))
+            }
+            //
+
+            // version
+            makeVersionFile()
+
         }
     }
 

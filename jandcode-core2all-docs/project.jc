@@ -25,7 +25,7 @@ class P extends ProjectScript {
             )
             addSrc('src')
             props['toc'] = 'toc.xml'
-            props['title'] = project.name
+            props['title'] = "Jandcode Core2"
             props['project.version'] = project.version
             //
             addSrc("../jandcode-core2-docs/src", prefix: "core")
