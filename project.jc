@@ -30,6 +30,12 @@ class P extends ProjectScript {
         }
         //
         include(ThisProductBuilder)
+
+        //
+        cm.add("mdoc-serve", "Запустить web-сервер для документации", this.&cmServe,
+                cm.opt("nogen", false, "Пропустить процесс генерации исходников"),
+                cm.opt("p", 4000, "Порт (по умолчанию 4000)"),
+        )
     }
 
     static class ThisProductBuilder extends ProductBuilder {
@@ -48,6 +54,11 @@ class P extends ProjectScript {
             makeVersionFile()
 
         }
+    }
+
+    void cmServe(CmArgs args) {
+        Project p = load("jandcode-core2all-docs")
+        p.cm.exec("mdoc-serve", args)
     }
 
 }
