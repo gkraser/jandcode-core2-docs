@@ -26,6 +26,7 @@ class P extends ProjectScript {
                     "jandcode-jsa-docs",
                     "jandcode-mdoc-docs",
                     "jandcode-web-docs",
+                    "jandcode-core2all-docs",
             ]
         }
         //

@@ -2,7 +2,7 @@
 <root>
 
     <!-- Основное содержание -->
-    <toc-root topic="index.md">
+    <toc-root topic="./index.md">
         <toc topic="./**/*"/>
     </toc-root>
 

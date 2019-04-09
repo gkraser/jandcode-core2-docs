@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <toc-root topic="./index.md">
+        <include toc="core/toc.xml"/>
+        <include toc="web/toc.xml"/>
+        <include toc="jsa/toc.xml"/>
+        <include toc="db/toc.xml"/>
+        <include toc="mdoc/toc.xml"/>
+        <toc topic="./**/*"/>
+    </toc-root>
+
+</root>
