@@ -34,6 +34,8 @@ class P extends ProjectScript {
 
     static class ThisProductBuilder extends ProductBuilder {
         void onExec() {
+            cm.exec("prepare")
+            //
             Project p = load("jandcode-core2all-docs")
             p.cm.exec("mdoc-build")
             //
