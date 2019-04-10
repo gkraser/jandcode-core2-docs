@@ -15,9 +15,8 @@ Thumbs.db
 _jc
 _gen
 node_modules
-.gradle
+.idea
 
 syntax: regexp
 ^_
 ^lib/_
-

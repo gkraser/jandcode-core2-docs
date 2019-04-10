@@ -10,15 +10,16 @@ class P extends ProjectScript {
 
     void onInclude() {
         //
-        project.name = "jandcode-mdoc-docs"
-        //
-        include(RegistryModuleDef)
+        project.name = "jandcode-core2-docs"
 
         include(JavaProject).with {
             moduleGroup = "Docs"
             dirsSrcTest = []
             depends.dev.add(
+                    "jandcode-core",
+                    "jandcode-jc",
                     "jandcode-mdoc",
+                    "jandcode-web",
             )
         }
         //
@@ -28,8 +29,7 @@ class P extends ProjectScript {
             )
             addSrc('src')
             props['toc'] = 'toc.xml'
-            props['title'] = project.name
-            //props['serve.autoReload'] = false
+            props['title'] = "Jandcode Core2"
             props['project.version'] = project.version
         }
     }
