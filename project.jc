@@ -22,6 +22,7 @@ class P extends ProjectScript {
         //
         afterLoad {
             cm.items.add(load("docs").cm.find("mdoc-serve"))
+            cm.items.add(load("docs").cm.find("mdoc-build"))
         }
     }
 

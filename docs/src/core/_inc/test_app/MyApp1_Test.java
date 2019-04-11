@@ -1,4 +1,4 @@
-package test._inc.app;
+package core._inc.test_app;
 
 import jandcode.core.std.*;
 import jandcode.core.test.*;

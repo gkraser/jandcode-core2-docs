@@ -1,7 +1,6 @@
 package _inc.nm_libs
 
 import jandcode.jc.*
-import jandcode.jsa.jc.*
 
 class Npm1 extends ProjectScript {
 

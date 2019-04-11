@@ -2,9 +2,9 @@
 <root>
 
     <toc-root topic="./index">
-        <toc topic="./module"/>
-        <toc topic="./module-cfx"/>
-        <toc topic="./module-api"/>
+        <toc topic="./conf">
+            <toc topic="./conf-*"/>
+        </toc>
         <toc topic="./**/*"/>
     </toc-root>
 

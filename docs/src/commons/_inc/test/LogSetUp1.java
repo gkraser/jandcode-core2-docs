@@ -1,4 +1,4 @@
-package test._inc.misc;
+package commons._inc.test;
 
 import jandcode.commons.test.*;
 
