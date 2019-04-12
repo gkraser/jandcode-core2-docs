@@ -1,4 +1,4 @@
-package tutorial._inc.dadatir;
+package tutorial._inc.datadir;
 
 import jandcode.core.std.DataDirService;
 import jandcode.core.test.App_Test;

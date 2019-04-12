@@ -1,0 +1,6 @@
+<root>
+    <datadir>
+        <path name="my-root" path="C:/Program Files (x86)/Windows Defender/"/>
+        <path name="temp" path="D:/Temp/.jandcode-cache"/>
+    </datadir>
+</root>
