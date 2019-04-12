@@ -9,6 +9,7 @@
         <include toc="mdoc/toc.xml"/>
         <include toc="jsa/toc.xml"/>
         <include toc="db/toc.xml"/>
+        <include toc="tutorial/toc.xml"/>
         <toc topic="./**/*"/>
     </toc-root>
 

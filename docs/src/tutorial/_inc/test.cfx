@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-depends module="jandcode.core"/>
+
+    <datadir>
+        <path name="my-root" path="C:/Program Files (x86)/Windows Defender/"/>
+        <path name="temp" path="D:/Temp/.jandcode-cache"/>
+        <path name="my-files" path="${appdir}/data/files"/>
+    </datadir>
+
+</root>
