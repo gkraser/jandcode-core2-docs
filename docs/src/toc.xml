@@ -2,15 +2,18 @@
 <root>
 
     <toc-root topic="index.md">
-        <include toc="commons/toc.xml"/>
-        <include toc="jc/toc.xml"/>
-        <include toc="core/toc.xml"/>
-        <include toc="web/toc.xml"/>
-        <include toc="mdoc/toc.xml"/>
-        <include toc="jsa/toc.xml"/>
-        <include toc="db/toc.xml"/>
-        <include toc="tutorial/toc.xml"/>
-        <toc topic="./**/*"/>
+        <include toc="wax/toc.xml"/>
+        <toc title="Модули">
+            <include toc="commons/toc.xml"/>
+            <include toc="jc/toc.xml"/>
+            <include toc="core/toc.xml"/>
+            <include toc="web/toc.xml"/>
+            <include toc="mdoc/toc.xml"/>
+            <include toc="jsa/toc.xml"/>
+            <include toc="db/toc.xml"/>
+            <include toc="tutorial/toc.xml"/>
+            <toc topic="./**/*"/>
+        </toc>
     </toc-root>
 
 </root>
