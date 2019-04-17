@@ -29,7 +29,7 @@ class P extends ProjectScript {
             )
             addSrc('src')
             props['toc'] = 'toc.xml'
-            props['title'] = "Jandcode Core2"
+            props['title'] = "Jandcode Core"
             props['project.version'] = project.version
         }
     }
