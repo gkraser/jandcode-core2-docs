@@ -2,7 +2,8 @@
 <root>
 
     <toc-root topic="index.md">
-        <include toc="wax/toc.xml"/>
+        <toc topic="intro/intro"/>
+        <toc topic="intro/install"/>
         <toc title="Модули">
             <include toc="commons/toc.xml"/>
             <include toc="jc/toc.xml"/>
@@ -12,8 +13,9 @@
             <include toc="jsa/toc.xml"/>
             <include toc="db/toc.xml"/>
             <include toc="tutorial/toc.xml"/>
-            <toc topic="./**/*"/>
+            <include toc="wax/toc.xml"/>
         </toc>
+        <toc topic="./**/*"/>
     </toc-root>
 
 </root>
