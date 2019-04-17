@@ -2,8 +2,10 @@
 <root>
 
     <toc-root topic="index.md">
-        <toc topic="intro/intro"/>
-        <toc topic="intro/install"/>
+        <toc topic="intro/intro">
+            <toc topic="intro/install"/>
+            <toc topic="intro/getstart"/>
+        </toc>
         <toc title="Модули">
             <include toc="commons/toc.xml"/>
             <include toc="jc/toc.xml"/>
