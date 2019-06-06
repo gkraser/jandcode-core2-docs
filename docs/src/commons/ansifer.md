@@ -1,6 +1,6 @@
 
-Ansifer
-=======
+Ansi цвета в консоле
+====================
 
 @@code-info
     class=jandcode.commons.UtAnsifer
@@ -19,6 +19,15 @@ Ansifer
 
 
 Доступные цвета определены в `jandcode.commons.ansifer.AnsiferColor`.
+
+Регистрация стилией
+-------------------
+
+@@code file=AnsiferExamples.java part=reg1
+
+По умолчанию зарегистрированы следующие стили:
+
+@@code file=DefaultAnsiferStyles#m1
 
     
 

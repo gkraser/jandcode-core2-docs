@@ -6,7 +6,7 @@ import jandcode.commons.ansifer.*;
 public class AnsiferExamples {
 
     public void example1() {
-        // включаем ans-консоль
+        // включаем ansi-консоль
         UtAnsifer.ansiOn();
 
         // выводим строку Hello желтым на синем
@@ -20,8 +20,24 @@ public class AnsiferExamples {
         // выводим строку Hello зарегистрированным стилем
         System.out.println(UtAnsifer.color("my-warn", "Hello"));
 
-        // вылючаем ans-консоль
+        // вылючаем ansi-консоль
         UtAnsifer.ansiOff();
+    }
+
+    public void reg1() {
+        // регистрируем стиль
+        UtAnsifer.registerStyle("my-style1", AnsiferColor.red_h, AnsiferColor.cyan);
+
+        // регистрируем стиль по умолчанию, если он еще не зарегистрирован
+        UtAnsifer.registerStyle("my-style2", AnsiferColor.red_h, AnsiferColor.cyan, true);
+
+        // null указываем в случае, если хотим использовать цвет в консоле по умолчанию.
+        // например здесь будет цвет желтый на черном, если консоль по умолчанию черная
+        UtAnsifer.registerStyle("my-style3", AnsiferColor.yellow, null);
+
+        // регистрируем стиль, но не задаем цвета, будут использованы цвета
+        // консоли по умолчанию
+        UtAnsifer.registerStyle("my-style4", null, null);
     }
 
 }
