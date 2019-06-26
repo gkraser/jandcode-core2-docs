@@ -50,7 +50,7 @@ hg clone https://bitbucket.org/gkraser/jandcode-core2
 Переходим в каталог `D:\jc-projects\jandcode-core2` и запускаем сборку проекта:
 
 ```
-jc product -u
+build-bin.bat
 ```
 
 После окончания сборки имеем каталог `bin`, в котором собрана последняя
@@ -92,13 +92,11 @@ jc
 Обновление
 ----------
 
-Что бы обновить версию до последней, необходимо получить новую версию исходников и 
-пересобрать продукт:
+Что бы обновить версию до последней, выполните:
 
 ```
 cd /D D:\jc-projects\jandcode-core2
-hg pull -u
-jc product -u
+build-bin.bat
 ```
 
 Если версия изменилась, продукт будет пересобран.
@@ -125,7 +123,7 @@ jc product -u
 cd /D D:\jc-projects\jandcode-core2
 hg pull -u
 hg update dev
-jc product -u
+build-bin.bat
 ```
 
 Поддержка запуска jc версии 1.5
