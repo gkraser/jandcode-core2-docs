@@ -13,7 +13,7 @@
 
 * Java JDK, версия 8
 * [Gradle](https://gradle.org/), версия 5 или старше
-* [Node.js](https://nodejs.org), версия 10 или старше
+* [Node.js](https://nodejs.org), версия 10.16.x или старше
 * [Mercurial](https://www.mercurial-scm.org/), версия 4 или старше
 
 В переменной `PATH` необходимо настроить пути так, что бы с командной строки
