@@ -1,8 +1,8 @@
 package _inc.action
 
 import jandcode.commons.variant.*
-import jandcode.web.*
-import jandcode.web.action.*
+import jandcode.core.web.RequestUtils
+import jandcode.core.web.action.BaseAction
 
 class SimpleAction extends BaseAction {
     protected void onExec() throws Exception {

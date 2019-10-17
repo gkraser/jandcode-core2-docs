@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 
-    <x-depends module="jandcode.web"/>
+    <x-depends module="jandcode.core.web"/>
 
     <web>
         <gsp name="jc/tag1" path="#{path}/_tag1.gsp"/>

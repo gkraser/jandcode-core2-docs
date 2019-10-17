@@ -19,13 +19,12 @@ class P extends ProjectScript {
                     "jandcode-core",
                     "jandcode-jc",
                     "jandcode-mdoc",
-                    "jandcode-web",
+                    "jandcode-core-web",
             )
         }
         //
         include(MDocProject).with {
             depends.prod.add(
-                    "jandcode-mdoc-ext",
             )
             addSrc('src')
             props['toc'] = 'toc.xml'

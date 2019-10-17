@@ -1,7 +1,7 @@
 package _inc;
 
 import jandcode.core.*
-import jandcode.web.*
+import jandcode.core.web.AppServlet
 
 import javax.servlet.http.*
 

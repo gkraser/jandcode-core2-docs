@@ -3,8 +3,8 @@
 =================
 
 @@code-info
-    class=jandcode.groovy.UtGroovy
-    class=jandcode.groovy.GroovyCompiler
+    class=jandcode.commons.UtGroovy
+    class=jandcode.commons.groovy.GroovyCompiler
 
 
 В приложение можно встроить компилятор groovy.

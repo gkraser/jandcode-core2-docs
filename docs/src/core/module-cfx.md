@@ -39,8 +39,8 @@ module.cfx
 
 ```xml
 <root>
-    <x-depends module="jandcode.db"/>
-    <x-depends module="jandcode.db.mysql"/>
+    <x-depends module="jandcode.core.db"/>
+    <x-depends module="jandcode.core.db.mysql"/>
 </root>
 ```
 

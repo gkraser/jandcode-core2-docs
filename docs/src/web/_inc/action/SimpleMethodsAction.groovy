@@ -1,6 +1,6 @@
 package _inc.action
 
-import jandcode.web.action.*
+import jandcode.core.web.action.BaseAction
 
 class SimpleMethodsAction extends BaseAction {
 

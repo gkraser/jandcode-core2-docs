@@ -76,7 +76,7 @@ include(JavaProject).with {
     packageRoot = "sample.project1"
     //
     depends.prod.add(
-            "jandcode-web",
+            "jandcode-core-web",
     )
     depends.dev.add(
     )
@@ -89,7 +89,7 @@ include(JavaProject).with {
 ```groovy
 jandcode.jc.std.JavaProject jm = include(jandcode.jc.std.JavaProject)
 jm.packageRoot = "sample.project1"
-jm.depends.prod.add("jandcode-web")
+jm.depends.prod.add("jandcode-core-web")
 ```
 
 Или вот, в варианте синтаксиса `java`:
@@ -97,7 +97,7 @@ jm.depends.prod.add("jandcode-web")
 ```groovy
 jandcode.jc.std.JavaProject jm = include(jandcode.jc.std.JavaProject);
 jm.setPackageRoot("sample.project1");
-jm.getDepends().getProd().add("jandcode-web");
+jm.getDepends().getProd().add("jandcode-core-web");
 ```
 
 Надеюсь, теперь понятно, что метод `include` возвращает экземпляр класса
@@ -111,11 +111,11 @@ jm.getDepends().getProd().add("jandcode-web");
 
 ```groovy
 include(jandcode.jc.std.JavaProject).packageRoot = "sample.project1"
-include(jandcode.jc.std.JavaProject).depends.prod.add("jandcode-web")
+include(jandcode.jc.std.JavaProject).depends.prod.add("jandcode-core-web")
 // ну а так как в тексте класса имеется оператор:
 // import jandcode.jc.std.*
 // то можно и сократить текст:
-include(JavaProject).depends.prod.add("jandcode-db-derby")
+include(JavaProject).depends.prod.add("jandcode-core-db-derby")
 ```
 
 Разобравшись с общим синтаксисом, начинаем разбиратся с конкретными свойствами.
@@ -264,8 +264,8 @@ jc showlibs -l
 
 ```groovy
 depends.prod.add(
-        "jandcode-web",
-        "jandcode-db-derby",
+        "jandcode-core-web",
+        "jandcode-core-db-derby",
 )
 depends.dev.add(
 )
@@ -362,8 +362,8 @@ include(RootProject).with {
 
 ```groovy
 depends.prod.add(
-        "jandcode-web",
-        "jandcode-db-derby",
+        "jandcode-core-web",
+        "jandcode-core-db-derby",
         "sample-project1-module2",
 )
 ```

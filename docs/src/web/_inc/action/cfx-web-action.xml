@@ -2,7 +2,7 @@
 <root>
     <web>
         <action name="NAME"
-                class="jandcode.web.action.BaseAction"
+                class="jandcode.core.web.action.BaseAction"
         />
     </web>
 </root>

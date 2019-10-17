@@ -1,4 +1,4 @@
-package _inc.cm_code
+package mdoc._inc.cm_code
 
 import jandcode.commons.variant.*
 import jandcode.mdoc.builder.*

@@ -18,14 +18,8 @@
             <toc topic="./cm-custom"/>
         </toc>
 
-        <toc topic="./ext/index">
-            <toc topic="./cm">
-                <toc topic="./cm-*"/>
-            </toc>
-            <toc topic="./utils">
-                <toc topic="./utils-*"/>
-            </toc>
-            <toc topic="./**/*"/>
+        <toc topic="./utils">
+            <toc topic="./utils-*"/>
         </toc>
 
         <toc topic="./**/*"/>

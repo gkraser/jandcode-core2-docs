@@ -4,7 +4,7 @@
         <mount name="NAME"
                virtualPath="VIRTUAL-PATH"
                realPath="REAL-PATH"
-               class="jandcode.web.virtfile.IMountProvider"
+               class="jandcode.core.web.virtfile.IMountProvider"
         />
     </web>
 </root>

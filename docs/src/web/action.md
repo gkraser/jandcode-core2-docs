@@ -2,12 +2,12 @@
 Action
 ======
 
-Action - это объекты, реализующие интерфейс `jandcode.web.action.IAction`, которые
+Action - это объекты, реализующие интерфейс `jandcode.core.web.action.IAction`, которые
 обратывают http-запросы пользователя в контексте web-приложения и возвращают
 ответ клиенту.
 
 На практике для создания `action` необходимо создать наследника от класса
-`jandcode.web.action.BaseAction` и реализовать ему метод `onExec()`, в котором
+`jandcode.core.web.action.BaseAction` и реализовать ему метод `onExec()`, в котором
 и будет логика обработки запроса.
 
 Каждая `action` регистрируется в приложении под определенным именем, которое может
@@ -25,7 +25,7 @@ Action - это объекты, реализующие интерфейс `jandc
 после `http://localhost/myapp/` и до начала параметров (символа `?`)
 является `pathInfo`. Например в запросе
 `http://localhost/myapp/a1/a2/a3?param1=1&param2=2` имеем `pathInfo` равным `a1/a2/a3`.
-`pathInfo` доступно через метод `jandcode.web.Request#getPathInfo`.
+`pathInfo` доступно через метод `jandcode.core.web.Request#getPathInfo`.
 
 Для вышеприведенного примера регистрации `action` будут верны следующие преобразования
 `pathInfo` в `action`:

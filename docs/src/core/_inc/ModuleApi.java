@@ -7,8 +7,8 @@ public class ModuleApi extends BaseComp {
     public void test_createSubHolder() throws Exception {
         //= createSubHolder
         ModuleSubHolder h = getApp().getModules().createSubHolder();
-        h.add("jandcode-web");
-        h.add("jandcode-db-derby");
+        h.add("jandcode-core-web");
+        h.add("jandcode-core-db-derby");
         for (Module m : h) {
             System.out.println(m.getName());
         }
