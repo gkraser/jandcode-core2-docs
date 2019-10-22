@@ -15,7 +15,6 @@
             <include toc="jsa/toc.xml"/>
             <include toc="db/toc.xml"/>
             <include toc="tutorial/toc.xml"/>
-            <include toc="wax/toc.xml"/>
         </toc>
         <toc topic="./**/*"/>
     </toc-root>
