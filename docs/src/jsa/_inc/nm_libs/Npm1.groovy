@@ -11,7 +11,7 @@ class Npm1 extends ProjectScript {
             // зависимости, попадающие в package.json,
             // включая инструменты для разработки и библиотеки
             // для клиенского приложения
-            nodeDepends.putAll(
+            nodeDepends(
                     // инструменты
                     "@babel/cli": "7.2.3",
                     "cross-env": "5.2.0",
@@ -39,7 +39,7 @@ class Npm1 extends ProjectScript {
         //= part2
         // module 1
         include(JsaProject).with {
-            nodeDepends.putAll(
+            nodeDepends(
                     "cross-env": "5.2.0",
                     "axios": "0.18.0",
             )
@@ -47,7 +47,7 @@ class Npm1 extends ProjectScript {
 
         // module 2
         include(JsaProject).with {
-            nodeDepends.putAll(
+            nodeDepends(
                     "@babel/cli": "7.2.3",
                     "axios": "0.17.0",
             )
