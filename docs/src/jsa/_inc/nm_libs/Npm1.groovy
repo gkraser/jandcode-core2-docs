@@ -44,7 +44,7 @@ class Npm1 extends ProjectScript {
             // маппинг модулей в node_modules
             nodeModuleMapping(
                     /* ключ - как модуль импортируется
-                       значение - что на самом деле будет импортироватся.
+                       значение - что на самом деле будет импортироваться.
                        В этом случае: require('vue') -> require('vue/dist/vue')
                      */
                     "vue": "vue/dist/vue",
