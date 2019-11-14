@@ -50,6 +50,15 @@ class Npm1 extends ProjectScript {
                     "vue": "vue/dist/vue",
             )
 
+            // указываем файлы из клиенского набора node_modules,
+            // которые не нуждаются в процедуре извлечения вызовов require()
+            nodeExtractRequire(
+                    /* только исключающие маски, т.к. по умолчанию
+                       require() извлекается из всех файлов js
+                     */
+                    "!mocha/**/*.js",
+            )
+
         }
         //=
 
