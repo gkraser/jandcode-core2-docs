@@ -25,10 +25,10 @@ Sass
 Пример:
 
 ```scss
-@import "[*]/css/module-theme-std.js";
+@import "[*]/css/std-module.scss";
 ```  
 
-Найдутся файлы вида `MODULE-PATH1/css/module-theme-std.js`.
+Найдутся файлы вида `MODULE-PATH1/css/std-module.scss`.
 
 ```scss
 @import "../js/comp/*/index.scss";

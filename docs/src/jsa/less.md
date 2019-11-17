@@ -22,10 +22,10 @@ less
 Пример:
 
 ```less
-@import "[*]/css/module-theme-std.js";
+@import "[*]/css/std-module.less";
 ```  
 
-Найдутся файлы вида `MODULE-PATH1/css/module-theme-std.js`.
+Найдутся файлы вида `MODULE-PATH1/css/std-module.less`.
 
 ```less
 @import "../js/comp/*/index.less";
