@@ -75,10 +75,10 @@ project.name = "sample-project1"
 include(JavaProject).with {
     packageRoot = "sample.project1"
     //
-    depends.prod.add(
+    depends.prod(
             "jandcode-core-web",
     )
-    depends.dev.add(
+    depends.dev(
     )
     //
 }
@@ -89,7 +89,7 @@ include(JavaProject).with {
 ```groovy
 jandcode.jc.std.JavaProject jm = include(jandcode.jc.std.JavaProject)
 jm.packageRoot = "sample.project1"
-jm.depends.prod.add("jandcode-core-web")
+jm.depends.prod("jandcode-core-web")
 ```
 
 Или вот, в варианте синтаксиса `java`:
@@ -97,7 +97,7 @@ jm.depends.prod.add("jandcode-core-web")
 ```groovy
 jandcode.jc.std.JavaProject jm = include(jandcode.jc.std.JavaProject);
 jm.setPackageRoot("sample.project1");
-jm.getDepends().getProd().add("jandcode-core-web");
+jm.getDepends().prod("jandcode-core-web");
 ```
 
 Надеюсь, теперь понятно, что метод `include` возвращает экземпляр класса
@@ -263,11 +263,11 @@ jc showlibs -l
 зависимости модуля:
 
 ```groovy
-depends.prod.add(
+depends.prod(
         "jandcode-core-web",
         "jandcode-core-db-derby",
 )
-depends.dev.add(
+depends.dev(
 )
 ```
 
@@ -316,9 +316,9 @@ jc showlibs -a -n
 
 ```groovy
 include(RootProject).with {
-    modules = [
+    modules(
             "sample-project1",
-    ]
+    )
 }
 ```
 
@@ -329,9 +329,9 @@ include(RootProject).with {
 
 ```groovy
 include(RootProject).with {
-    modules = [
+    modules(
             "./sample-project1",
-    ]
+    )
 }
 ```
 
@@ -346,10 +346,10 @@ jc create -t:module -o:sample-project1-module2
 
 ```groovy
 include(RootProject).with {
-    modules = [
+    modules(
             "sample-project1",
             "sample-project1-module2",
-    ]
+    )
 }
 ```
 
@@ -361,7 +361,7 @@ include(RootProject).with {
 модуль:
 
 ```groovy
-depends.prod.add(
+depends.prod(
         "jandcode-core-web",
         "jandcode-core-db-derby",
         "sample-project1-module2",

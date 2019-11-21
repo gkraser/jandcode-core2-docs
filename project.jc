@@ -13,9 +13,9 @@ class P extends ProjectScript {
         project.version = include(HgVersion)
         //
         include(RootProject).with {
-            modules = [
+            modules(
                     "docs",
-            ]
+            )
         }
         //
         include(ThisProductBuilder)

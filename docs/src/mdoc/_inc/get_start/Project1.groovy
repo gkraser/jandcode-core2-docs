@@ -20,7 +20,7 @@ class Project1 extends ProjectScript {
         // (3) Настраиваем проект для mdoc
         include(MDocProject).with {
             // runtime-зависимости для запуска mdoc
-            depends.prod.add(
+            depends.prod(
             )
             // каталоги с исходниками документации
             addSrc('doc')

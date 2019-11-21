@@ -15,7 +15,7 @@ class P extends ProjectScript {
         include(JavaProject).with {
             moduleGroup = "Docs"
             dirsSrcTest = []
-            depends.dev.add(
+            depends.dev(
                     "jandcode-core",
                     "jandcode-jc",
                     "jandcode-mdoc",
@@ -24,7 +24,7 @@ class P extends ProjectScript {
         }
         //
         include(MDocProject).with {
-            depends.prod.add(
+            depends.prod(
             )
             addSrc('src')
             props['toc'] = 'toc.xml'
