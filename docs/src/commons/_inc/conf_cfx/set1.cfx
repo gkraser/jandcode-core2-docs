@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <x-set var1="value1"/>
+    <x-set var2="value2"/>
+
+    <node1 attr1="#{var1} % #{var2}"/>
+
+</root>
