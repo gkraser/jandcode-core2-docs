@@ -35,12 +35,9 @@ app тесты
 
 ```xml
 <root>
-    <x-include path="#{pathprop:jandcode.project.root}/app.cfx"/>
+    <x-include path="#{appdir}/app.cfx"/>
 </root>
 ```
-
-Здесь загружается файл `app.cfx` из каталога, на который указывает переменная
-`jandcode.project.root` из `.pathprop`.
 
 Если необходимо тестировать обособленный модуль, то в `test.cfx` нужно подключить
 необходимый модуль и не загружать `app.cfx`:
@@ -63,7 +60,7 @@ app тесты
     <my-params a1="1"/>
 
     <!-- подключаем внешний _tests.cfx из каталога с приложением для перекрытия параметров-->
-    <x-include path="#{pathprop:jandcode.project.root}/_tests.cfx" require="false"/>
+    <x-include path="#{appdir}/_tests.cfx" require="false"/>
 </root>
 ```
 

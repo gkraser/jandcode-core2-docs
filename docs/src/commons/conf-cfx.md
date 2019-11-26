@@ -196,10 +196,6 @@
 * `path` - абсолютный путь до текущего файла. Если текущий путь в VFS (например внутри jar),
   то и результат будет в формате VFS. Соответственно для реальной файловой системы
   путь будет в формате реальной файловой системы
-* `pathup:FILENAME` - абсолютный путь вверх до каталога, содержащего файл `FILENAME`,
-  начиная с текущего каталога
-* `pathprop:PROPNAME` - значение из `UtFile.getPathprop(String, String)`, начиная с
-  текущего каталога
 * `другое` - значение соответствующей системной переменной из `System.getProperties()`
 
 В описаниях подстановок используются термины:
@@ -214,12 +210,6 @@
 <root>
     <!-- attr1 равен пути, в котором лежит текущий файл -->
     <n1 attr1="#{path}"/>
-
-    <!-- если текущий файл лежит в каталоге d:\projects\myproject\myconfig
-         и существут каталог d:\projects\myproject\dir\subdir
-         то значение attr1 равно d:\projects\myproject\dir\subdir\cfg1.cfx
-     -->
-    <n2 attr1="#{pathup:dir/subdir}/cfg1.cfx"/>
 
     <!-- attr1 равен пути в временном каталоге d:\temp\myproject\myfile.txt -->
     <n3 attr1="#{java.io.tmpdir}/myproject/myfile.txt"/>
