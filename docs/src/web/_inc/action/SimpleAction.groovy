@@ -1,13 +1,12 @@
-package _inc.action
+package web._inc.action
 
 import jandcode.commons.variant.*
-import jandcode.core.web.RequestUtils
-import jandcode.core.web.action.BaseAction
+import jandcode.core.web.action.*
 
 class SimpleAction extends BaseAction {
     protected void onExec() throws Exception {
         // это запрос, тут есть все, что известно о запросе + утилиты
-        RequestUtils req = getReq()
+        ActionRequestUtils req = getReq()
         // это параметры запроса
         IVariantMap params = getReq().getParams()
         // возвращаем результат клиенту как строку

@@ -1,4 +1,4 @@
-package _inc.action
+package web._inc.action
 
 import jandcode.core.web.action.BaseAction
 
