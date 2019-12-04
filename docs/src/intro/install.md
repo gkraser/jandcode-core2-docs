@@ -2,9 +2,7 @@
 Установка
 =========
 
-!!! note
-    Инструкция предназначена для OS Windows 7/10
- 
+
 Настройка среды
 ---------------
 
@@ -16,10 +14,10 @@
 * [Node.js](https://nodejs.org), версия 10.16.x или старше
 * [Mercurial](https://www.mercurial-scm.org/), версия 4 или старше
 
-В переменной `PATH` необходимо настроить пути так, что бы с командной строки
+Среда должна быть настроена так, что бы, что бы с командной строки
 запускались приложения `java`, `javac`, `gradle`, `node`, `npm`, `hg`.
 
-!!! note
+!!! note "Поддержка IDE"
     Из коробки поддерживается только IDE 
     [IntelliJ IDEA](https://www.jetbrains.com/idea/), версия 2018 или старше.
 
@@ -28,17 +26,22 @@
 ---------
 
 Проект **Jandcode Core** поставляется в исходниках и компилируется на машине
-клиента.
+пользователя.
 
 Исходники доступны в репозитории mercurial: 
 [](https://bitbucket.org/gkraser/jandcode-core2).  
 
 Создаем произвольный рабочий каталог для проектов (например 
-`D:\jc-projects`) 
+`D:\jc-projects` для Windows или `~/jc-projects` для Linux) 
 и переходим в него:
 
-```
+
+```text title=Windows 
 cd /D D:\jc-projects
+```
+
+```text title=Linux
+cd ~/jc-projects
 ```
 
 Клонируем репозиторий:
@@ -47,43 +50,73 @@ cd /D D:\jc-projects
 hg clone https://bitbucket.org/gkraser/jandcode-core2
 ```
 
-Переходим в каталог `D:\jc-projects\jandcode-core2` и запускаем сборку проекта:
+Переходим в каталог `D:\jc-projects\jandcode-core2` 
+(для Linux `~/jc-projects/jandcode-core2`) и запускаем сборку проекта:
 
-```
+```text title=Windows
 build-bin.bat
+```
+
+```text title=Linux
+sh ./build-bin.sh
 ```
 
 После окончания сборки имеем каталог `bin`, в котором собрана последняя
 стабильная версия проекта. 
 
-Необходимо обеспечить доступ к `jc.bat` с командной строки.
-Для этого либо укажите каталог `D:\jc-projects\jandcode-core2\bin`
+Необходимо обеспечить доступ к `jc.bat` (`jc.sh` для Linux) с командной строки.
+Для этого:
+ 
+* **Windows**: укажите каталог `D:\jc-projects\jandcode-core2\bin`
 в переменной среды `PATH`, либо скопируйте файл 
 `D:\jc-projects\jandcode-core2\bin\jc.bat` в каталог, который 
 указан в переменной `PATH`.
+* **Linux**: создайте алиас для запуска `jc.sh`:
+    ```shell
+    alias jc='sh ~/jc-projects/jandcode-core2/bin/jc.sh $*'
+    ```
 
-Переходим в каталог `D:\jc-projects\jandcode-core2\bin` и запускаем настройку 
+Переходим в каталог `D:\jc-projects\jandcode-core2\bin` 
+(для Linux `~/jc-projects/jandcode-core2/bin`) и запускаем настройку 
 рабочего каталога для проектов:
 
-```
+```text title="Windows"
 jc create -t:jc-env -o:D:\jc-projects
 ```
 
-В каталоге `D:\jc-projects` будут созданы файлы `jc-env.bat` и  `jc-env.jc`.
-
-Далее переходим в каталог для проектов `D:\jc-projects` и запускаем 
-`jc`, что бы убедится, что все работает:
-
+```text title="Linux"
+jc create -t:jc-env -o:$HOME/jc-projects
 ```
+
+!!! warning
+    Обратите внимание на `$HOME` вместо `~`. Тильда в этом случае не сработает.
+
+
+В каталоге `D:\jc-projects` (для Linux `~/jc-projects`) будут созданы 
+файлы `jc-env.bat` (для Linux `jc-env.sh`) и `jc-env.jc`.
+
+Далее переходим в каталог для проектов `D:\jc-projects` 
+(для Linux `~/jc-projects`) и запускаем `jc`, что бы убедится, что все работает:
+
+```text title="Windows"
 cd /D D:\jc-projects
+jc
+```
+
+```text title="Linux"
+cd ~/jc-projects
 jc
 ```
 
 В выводе обращаем внимание, что `jc-home` указывает на каталог с собранным
 проектом:
 
-```
+```text title="Windows"
  * jc-home: D:\jc-projects\jandcode-core2\bin
+```   
+
+```text title="Linux"
+ * jc-home: /home/USERNAME/jc-projects/jandcode-core2/bin
 ```   
 
 Готово.
@@ -94,9 +127,14 @@ jc
 
 Что бы обновить версию до последней, выполните:
 
-```
+```text title="Windows"
 cd /D D:\jc-projects\jandcode-core2
 build-bin.bat
+```
+
+```text title="Linux"
+cd ~/jc-projects/jandcode-core2
+sh ./build-bin.sh
 ```
 
 Если версия изменилась, продукт будет пересобран.
@@ -119,11 +157,18 @@ build-bin.bat
 Просто обновите рабочий каталог с исходниками **Jandcode Core** до нужной Вам
 ветки или ревизии. Например для `dev`:
 
-```
+```text title="Windows"
 cd /D D:\jc-projects\jandcode-core2
 hg pull -u
 hg update dev
 build-bin.bat
+```
+
+```text title="Linux"
+cd ~/jc-projects/jandcode-core2
+hg pull -u
+hg update dev
+sh ./build-bin.sh
 ```
 
 Поддержка запуска jc версии 1.5
