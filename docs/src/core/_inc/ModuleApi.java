@@ -9,7 +9,7 @@ public class ModuleApi extends BaseComp {
         ModuleSubHolder h = getApp().getModules().createSubHolder();
         h.add("jandcode-core-web");
         h.add("jandcode-core-db-derby");
-        for (Module m : h) {
+        for (ModuleInst m : h) {
             System.out.println(m.getName());
         }
         //=

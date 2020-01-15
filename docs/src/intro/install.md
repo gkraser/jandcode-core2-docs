@@ -9,7 +9,7 @@
 Перед установкой **Jandcode Core** необходимо настроить среду.
 Должно быть установлено следующее:
 
-* Java JDK, версия 8
+* Java JDK, версия >=13
 * [Gradle](https://gradle.org/), версия 5 или старше
 * [Node.js](https://nodejs.org), версия 10.16.x или старше
 * [Mercurial](https://www.mercurial-scm.org/), версия 4 или старше
