@@ -1,0 +1,57 @@
+import jandcode.commons.*
+import jandcode.commons.conf.*
+import jandcode.commons.io.*
+import jandcode.jc.*
+import jandcode.jc.std.*
+import jandcode.mdoc.jc.*
+
+class P extends ProjectScript {
+
+    static beforeLoad = {
+        classpath("jandcode-mdoc-jc")
+    }
+
+    void onInclude() {
+        project.name = "catproj-bidash-doc"
+
+        include(JavaProject).with {
+            dirsSrcTest = []
+            depends.dev.add(
+            )
+        }
+        //
+        include(MDocProject).with {
+            addSrc('src')
+            addSrc('_gen', prefix: '_gen', resources: true)
+            props['toc'] = 'toc.xml'
+            props['title'] = project.name
+            props['project.version'] = project.version
+
+            genSrc("_gen/app1") { MDocGenTask t ->
+                ut.runcmd(cmd: "jc create -t:app -o:mypak-myapp", dir: t.dir)
+                new GenUtils().folderToConf(t.dir + "/mypak-myapp", t.dir + "/mypak-myapp.cfx")
+            }
+        }
+
+    }
+
+    //////
+
+    class GenUtils {
+        void folderToConf(String path, String outFile) {
+            DirScanner<File> sc = UtFile.createDirScanner(path)
+            sc.needDirs = true
+            sc.needFiles = true
+            List<File> lst = sc.load()
+            File f_path = new File(path)
+            Conf conf = UtConf.create()
+            for (f in lst) {
+                String f1 = UtFile.getRelativePath(f_path, f)
+                conf.setValue(f1, "")
+            }
+            UtConf.save(conf).toFile(outFile)
+        }
+    }
+
+
+}
