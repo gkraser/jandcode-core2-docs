@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <lib name="NAME" version="VERSION" client="BOOL">
+        <include-client mask="MAKS"/>
+        <exclude-client mask="MAKS"/>
+        <module-mapping module="NAME" real-module="REAL-NAME"/>
+        <exclude-require mask="MASK"/>
+    </lib>
+</root>

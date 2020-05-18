@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- Библиотека для использования на клиенте -->
+    <lib name="vue" version="2.6.11" client="true">
+        <include-client mask="**/*.js"/>
+        <exclude-client mask="**/*-debug.js"/>
+        <module-mapping module="vue" real-module="vue/dist/vue"/>
+        <exclude-require mask="dist/**/*"/>
+    </lib>
+
+    <!-- Библиотека для использования в инструментах -->
+    <lib name="gulp" version="4.0.2"/>
+
+</root>
