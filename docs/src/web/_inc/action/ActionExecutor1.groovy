@@ -12,7 +12,7 @@ class ActionExecutor1 extends BaseAction {
 
         void execActionMethod(BaseAction action, Method method) throws Exception {
             // вызываем оригинальный метод и передаем себя в качестве параметра
-            method.invoke(inst, this)
+            method.invoke(action, this)
 
             // пользуемся результатами
             Map m = new HashMap()
