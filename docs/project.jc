@@ -20,6 +20,7 @@ class P extends ProjectScript {
                     "jandcode-jc",
                     "jandcode-mdoc",
                     "jandcode-core-web",
+                    "jandcode-core-jc",
             )
         }
         //

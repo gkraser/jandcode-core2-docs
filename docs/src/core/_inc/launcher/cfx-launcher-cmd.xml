@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <launcher>
+
+        <cmd name="CMD-NAME"
+             class="CMD-CLASS"
+             enabled="BOOL"
+             cmdname="CMD-NEW-NAME"/>
+
+    </launcher>
+
+</root>

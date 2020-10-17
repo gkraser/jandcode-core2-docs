@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <launcher>
+
+        <cmd name="my-cmd1"
+             class="mypak.MyCmd1"/>
+        
+    </launcher>
+
+</root>
