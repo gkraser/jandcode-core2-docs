@@ -12,10 +12,10 @@
 * Java JDK, версия >=13
 * [Gradle](https://gradle.org/), версия 5 или старше
 * [Node.js](https://nodejs.org), версия 10.16.x или старше
-* [Mercurial](https://www.mercurial-scm.org/), версия 4 или старше
+* [Git](https://git-scm.com/), версия 2 или старше
 
 Среда должна быть настроена так, что бы, что бы с командной строки
-запускались приложения `java`, `javac`, `gradle`, `node`, `npm`, `hg`.
+запускались приложения `java`, `javac`, `gradle`, `node`, `npm`, `git`.
 
 !!! note "Поддержка IDE"
     Из коробки поддерживается только IDE 
@@ -25,11 +25,16 @@
 Установка 
 ---------
 
+!!! warning 
+    Каталоги и имена файлов с пробелами не поддерживаются нигде.
+    Все каталоги и файлы в используемых инструментах и проектах должны быть 
+    без пробелов.
+
 Проект **Jandcode Core** поставляется в исходниках и компилируется на машине
 пользователя.
 
-Исходники доступны в репозитории mercurial: 
-[](https://bitbucket.org/gkraser/jandcode-core2).  
+Исходники доступны в репозитории git: 
+[](https://github.com/gkraser/jandcode-core2).  
 
 Создаем произвольный рабочий каталог для проектов (например 
 `D:\jc-projects` для Windows или `~/jc-projects` для Linux) 
@@ -47,7 +52,7 @@ cd ~/jc-projects
 Клонируем репозиторий:
 
 ```
-hg clone https://bitbucket.org/gkraser/jandcode-core2
+git clone https://github.com/gkraser/jandcode-core2
 ```
 
 Переходим в каталог `D:\jc-projects\jandcode-core2` 
@@ -95,6 +100,17 @@ jc create -t:jc-env -o:$HOME/jc-projects
 В каталоге `D:\jc-projects` (для Linux `~/jc-projects`) будут созданы 
 файлы `jc-env.bat` (для Linux `jc-env.sh`) и `jc-env.jc`.
 
+В файле `jc-env.bat` (для Linux `jc-env.sh`) можно дополнительно
+настроить конкретную версию java, которая будет использоваться при запуске `jc`. 
+Пример:
+
+```bat title="jc-env.bat"
+set JAVA_HOME=d:\jdks\jdk14
+set PATH=%JAVA_HOME%\bin;%PATH% 
+java -version
+echo --------------------------------------------------------------------------
+```
+
 Далее переходим в каталог для проектов `D:\jc-projects` 
 (для Linux `~/jc-projects`) и запускаем `jc`, что бы убедится, что все работает:
 
@@ -140,16 +156,16 @@ sh ./build-bin.sh
 Если версия изменилась, продукт будет пересобран.
 
 
-Ветки default и dev
+Ветки master и dev
 -------------------
 
 !!! warning
-    В ветке `default` находится стабильный релиз. Работоспособность
+    В ветке `master` находится стабильный релиз. Работоспособность
     других веток и ревизий не гарантируется.
 
-В репозитории имеются 2 основных ветки: `default` и `dev`.
+В репозитории имеются 2 основных ветки: `master` и `dev`.
 
-Ветка `default` содержит последний стабильный релиз.
+Ветка `master` содержит последний стабильный релиз.
 
 Ветка `dev` содержит текущую версию для разработки.
 
@@ -159,15 +175,15 @@ sh ./build-bin.sh
 
 ```text title="Windows"
 cd /D D:\jc-projects\jandcode-core2
-hg pull -u
-hg update dev
+git pull
+git checkout dev
 build-bin.bat
 ```
 
 ```text title="Linux"
 cd ~/jc-projects/jandcode-core2
-hg pull -u
-hg update dev
+git pull 
+git checkout dev
 sh ./build-bin.sh
 ```
 
