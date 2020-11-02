@@ -27,7 +27,20 @@ class P extends ProjectScript {
         include(MDocProject).with {
             depends.prod(
             )
+            //
+            def coreRoot = wd("../../jandcode-core2")
+            def apexProjectTemplate = "${coreRoot}/p-apex/jandcode-core-apex-jc/jc-data/projecttml/apex-app"
+            def excludesTemp = [
+                    "**/temp/**/*", "**/temp",
+                    "**/_jc/**/*", "**/_jc",
+                    "**/out/**/*", "**/out",
+            ]
+            //
             addSrc('src')
+            addSrc(apexProjectTemplate, resources: true, prefix: 'samples/apex-app-template',
+                    excludes: excludesTemp
+            )
+
             props['toc'] = 'toc.xml'
             props['title'] = "Jandcode Core"
             props['project.version'] = project.version
