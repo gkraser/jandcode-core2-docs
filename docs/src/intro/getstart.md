@@ -12,7 +12,7 @@
 Переходим в рабочий каталог и запускаем создание проекта:
 
 ```
-jc create -t:apex-app -o:jcsample-project1
+jc create -t:apx-app -o:jcsample-project1
 ```
 
 Будет создан каталог `jcsample-project1` с проектом.

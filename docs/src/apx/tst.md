@@ -3,15 +3,15 @@ tst
 ====
 
 @@code-info 
-    module=jandcode.core.apex.tst
+    module=jandcode.core.apx.tst
 
 Поддержка тестирования в контексте клиентского web-приложения.
 
 Введение
 --------
 
-При генерации проекта `apex-app` к нему по умолчанию подключается
-модуль `jandcode.core.apex.tst`. Он будет загружатся только в 
+При генерации проекта `apx-app` к нему по умолчанию подключается
+модуль `jandcode.core.apx.tst`. Он будет загружатся только в 
 dev-режиме.
 
 При подключенном модуле становится доступен url
@@ -50,7 +50,7 @@ dev-режиме.
 Если имеется метод `run()`, то этот метод просто выполняется.
 Пример файла с методом `run()`:
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/run1.test.js
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/run1.test.js
     title=run1.test.js
  
 В качестве среды выполнения unittest используется [mocha](https://mochajs.org/) в режиме
@@ -58,7 +58,7 @@ dev-режиме.
 Достаточно объявить тесты в тексте js и они будут выполнятся при открытии такого файла.
 Пример файла с unittest:
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/tests/test1.test.js
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/tests/test1.test.js
     title=test1.test.js
  
 ### **/*.test.vue
@@ -67,20 +67,20 @@ dev-режиме.
 Любой обычный vue-компонент, но можно использовать и расширенный вариант его,
 например:
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/Vue1.test.vue
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/Vue1.test.vue
     lang=html title=Vue1.test.vue
     
 Кроме того, vue-компонент можно рендерить в контексте вашего приложения,
 что бы он мог пользоватся данными и функционалом приложения:
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/InAppVue1.test.vue
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/InAppVue1.test.vue
     lang=html title=InAppVue1.test.vue
     
 ### **/*.html.gsp
 
 Обычная gsp, рендерится без окружения:
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/gsp1.html.gsp
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/gsp1.html.gsp
     title=gsp1.html.gsp
 
 
@@ -91,7 +91,7 @@ dev-режиме.
 
 ### vendor.js
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/vendor.js
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/vendor.js
     title=vendor.js
  
 Этот файл содержит импорт и экспорт среды, в которой будет проводится
@@ -100,7 +100,7 @@ dev-режиме.
    
 ### run-js.gsp
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/run-js.gsp
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/run-js.gsp
     title=run-js.gsp
  
 Этот файл содержит gsp, которая рендерит страницу для запуска файлов js и vue.
@@ -108,7 +108,7 @@ dev-режиме.
 
 ### env-tst.js
 
-@@code file=samples/apex-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/env-tst.js
+@@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/env-tst.js
     title=env-tst.js
  
 Этот файл испортируется в `run-js.gsp` перед вашим кодом.

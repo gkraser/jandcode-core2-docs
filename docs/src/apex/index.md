@@ -1,4 +1,0 @@
-
-Jandcode Core Apex
-==================
-

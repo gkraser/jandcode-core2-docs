@@ -29,7 +29,7 @@ class P extends ProjectScript {
             )
             //
             def coreRoot = wd("../../jandcode-core2")
-            def apexProjectTemplate = "${coreRoot}/p-apex/jandcode-core-apex-jc/jc-data/projecttml/apex-app"
+            def apxProjectTemplate = "${coreRoot}/p-apx/jandcode-core-apx-jc/jc-data/projecttml/apx-app"
             def excludesTemp = [
                     "**/temp/**/*", "**/temp",
                     "**/_jc/**/*", "**/_jc",
@@ -37,7 +37,7 @@ class P extends ProjectScript {
             ]
             //
             addSrc('src')
-            addSrc(apexProjectTemplate, resources: true, prefix: 'samples/apex-app-template',
+            addSrc(apxProjectTemplate, resources: true, prefix: 'samples/apx-app-template',
                     excludes: excludesTemp
             )
 
