@@ -3,8 +3,7 @@
 
     <!-- Основное содержание -->
     <toc-root topic="./index.md">
-        <toc topic="./intro"/>
-        <include toc="apx/webapp/toc.xml"/>
+        <toc topic="./frames"/>
         <toc topic="./**/*"/>
     </toc-root>
 

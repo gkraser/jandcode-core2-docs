@@ -7,6 +7,7 @@
             <toc topic="intro/getstart"/>
         </toc>
         <toc title="Модули">
+            <include toc="apx/toc.xml"/>
             <include toc="commons/toc.xml"/>
             <include toc="jc/toc.xml"/>
             <include toc="core/toc.xml"/>
