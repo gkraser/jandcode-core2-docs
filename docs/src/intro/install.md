@@ -36,6 +36,8 @@
 Исходники доступны в репозитории git: 
 [](https://github.com/gkraser/jandcode-core2).  
 
+### Шаг 1. Создание каталога для проектов
+
 Создаем произвольный рабочий каталог для проектов (например 
 `D:\jc-projects` для Windows или `~/jc-projects` для Linux) 
 и переходим в него:
@@ -49,11 +51,52 @@ cd /D D:\jc-projects
 cd ~/jc-projects
 ```
 
+### Шаг 2. Создание jc-env.bat
+
+Создайте в каталоге проектов `D:\jc-projects` файл `jc-env.bat`
+со следующим содержимым:
+
+```txt title=jc-env.bat
+@echo off
+
+set JAVA_HOME=c:\tools\jdk15
+set GRADLE_HOME=c:\tools\gradle
+set NODE_HOME=c:\tools\nodejs
+
+set PATH=%JAVA_HOME%\bin;%GRADLE_HOME%\bin;%NODE_HOME%;%PATH%
+
+java -version
+call gradle -version
+call npm -version
+
+echo -------------------------------------------------------------------------------------
+
+set JC_RUN=%~dp0jandcode-core2\bin\jc-run.bat
+
+```
+
+Измените переменные `JAVA_HOME`, `GRADLE_HOME`, `NODE_HOME`
+на значения, соответствующие вашей среде.
+
+Запустите этот файл и убедитесь, что запускаются нужные вам версии
+`java`, `gradle`, `npm`.
+
+Строки, запускающие `gradle` и `npm`, можно будет потом закоментировать,
+что бы не мешалось. Показ версии `java` рекомендую оставить,
+что бы контролировать среду в случае, когда установлено несколько версий java.
+
+
+### Шаг 3. Клонирование репозитория
+
+Убеждаемся, что находимся в каталоге проектов (`D:\jc-projects` ).
 Клонируем репозиторий:
 
 ```
 git clone https://github.com/gkraser/jandcode-core2
 ```
+
+
+### Шаг 4. Сборка
 
 Переходим в каталог `D:\jc-projects\jandcode-core2` 
 (для Linux `~/jc-projects/jandcode-core2`) и запускаем сборку проекта:
@@ -69,6 +112,9 @@ sh ./build-bin.sh
 После окончания сборки имеем каталог `bin`, в котором собрана последняя
 стабильная версия проекта. 
 
+
+### Шаг 5. jc.bat / jc.sh
+
 Необходимо обеспечить доступ к `jc.bat` (`jc.sh` для Linux) с командной строки.
 Для этого:
  
@@ -76,42 +122,22 @@ sh ./build-bin.sh
 в переменной среды `PATH`, либо скопируйте файл 
 `D:\jc-projects\jandcode-core2\bin\jc.bat` в каталог, который 
 указан в переменной `PATH`.
-* **Linux**: создайте алиас для запуска `jc.sh`:
-    ```shell
-    alias jc='sh ~/jc-projects/jandcode-core2/bin/jc.sh $*'
-    ```
+* **Linux**: укажите каталог `$HOME/jc-projects/jandcode-core2/bin`
+в переменной среды `PATH`, либо скопируйте файл 
+`$HOME/jc-projects/jandcode-core2/bin/jc.sh` в каталог, который 
+указан в переменной `PATH`. 
 
-Переходим в каталог `D:\jc-projects\jandcode-core2\bin` 
-(для Linux `~/jc-projects/jandcode-core2/bin`) и запускаем настройку 
-рабочего каталога для проектов:
+Убедитесь, что команда `jc` доступна:
 
-```text title="Windows"
-jc create -t:jc-env -o:D:\jc-projects
-```
+```text title=Windows
+where jc
+```     
 
-```text title="Linux"
-jc create -t:jc-env -o:$HOME/jc-projects
-```
+В выводе этой команды ваш настроенный `jc.bat` должен быть первым в списке.
 
-!!! warning
-    Обратите внимание на `$HOME` вместо `~`. Тильда в этом случае не сработает.
+### Шаг 6. Проверяем, что все работает
 
-
-В каталоге `D:\jc-projects` (для Linux `~/jc-projects`) будут созданы 
-файлы `jc-env.bat` (для Linux `jc-env.sh`) и `jc-env.jc`.
-
-В файле `jc-env.bat` (для Linux `jc-env.sh`) можно дополнительно
-настроить конкретную версию java, которая будет использоваться при запуске `jc`. 
-Пример:
-
-```bat title="jc-env.bat"
-set JAVA_HOME=d:\jdks\jdk14
-set PATH=%JAVA_HOME%\bin;%PATH% 
-java -version
-echo --------------------------------------------------------------------------
-```
-
-Далее переходим в каталог для проектов `D:\jc-projects` 
+Переходим в каталог для проектов `D:\jc-projects` 
 (для Linux `~/jc-projects`) и запускаем `jc`, что бы убедится, что все работает:
 
 ```text title="Windows"
@@ -141,6 +167,10 @@ jc
 Обновление
 ----------
 
+!!! note
+    Перед обновлением все запущенные процессы, которые используют
+    обновляемый продукт, должны быть остановлены.
+    
 Что бы обновить версию до последней, выполните:
 
 ```text title="Windows"
