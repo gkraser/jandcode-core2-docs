@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <app
+            title="JandcodeCoreSamplesDocapx1"
+            mainmodule="jandcode.core.samples.docapx1.main"
+    />
+
+    <x-depends module="jandcode.core.samples.docapx1.main"/>
+
+</root>
