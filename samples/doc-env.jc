@@ -1,0 +1,13 @@
+import jandcode.jc.*
+
+class P extends ProjectScript {
+
+    void onInclude() {
+        log "DocEnv for project: ${project.wd}"
+        //
+        load("${scriptDir}/..")
+        //
+        ut.addDependsAllSource()
+    }
+
+}

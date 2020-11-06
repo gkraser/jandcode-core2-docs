@@ -18,6 +18,7 @@ class P extends ProjectScript {
             )
         }
         //
+        ut.includeIfExists('../doc-env.jc')
     }
 
 }
