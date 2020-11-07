@@ -10,6 +10,10 @@ export function run() {
 
     let routes = [
         {path: '', frame: Home},
+        {
+            path: '/frames/withparams/:id/:code',
+            frame: 'jandcode/core/samples/docapx1/main/js/frames/ShowFrameWithParams.vue'
+        },
     ]
 
     apx.app.run(() => {

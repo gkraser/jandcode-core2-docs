@@ -2,7 +2,6 @@
     <App>
         <template #toolbar-right>
             <jc-toolbar>
-                <jc-action icon="bus"/>
             </jc-toolbar>
         </template>
 
@@ -31,6 +30,9 @@
                     <jc-side-menu-item label="Показ фрейма с параметрами (async)"
                                        icon="frame"
                                        @click="asyncShowFrame1()"/>
+                    <jc-side-menu-item label="Показ фрейма с параметрами (route)"
+                                       icon="frame"
+                                       @click="routeShowFrame1()"/>
                 </jc-side-menu-item>
             </jc-side-menu>
         </template>
@@ -57,6 +59,7 @@ export default {
         return {}
     },
     methods: {
+
         /**
          * Показ фрейма showFrame
          * @param shortName короткое имя без расширения, относительно каталога с фреймами
@@ -68,6 +71,7 @@ export default {
                 params: params
             })
         },
+
         /**
          * Показ диалого showDialog
          * @param shortName короткое имя без расширения, относительно каталога с фреймами
@@ -76,6 +80,18 @@ export default {
         sd(shortName, params) {
             apx.showDialog({
                 frame: baseFramePath + shortName + ".vue",
+                params: params
+            })
+        },
+
+        /**
+         * Показ фрейма через путь в роутинге.
+         * @param routePath путь, который распознается роутингом.
+         * @param params параметры. Могут отсутствовать
+         */
+        rt(routePath, params) {
+            apx.showFrame({
+                frame: routePath,
                 params: params
             })
         },
@@ -108,6 +124,22 @@ export default {
                 }
             })
             frameInst.title = frameInst.title + " (async)"
+            //=
+        },
+
+        async routeShowFrame1() {
+            //= routeShowFrame1
+            let frameInst = await apx.showFrame({
+                frame: '/frames/withparams/123/infocode',
+                params: {
+                    internal: {
+                        param2: 1
+                    },
+                    param1: 'route',
+                    param2: 2
+                }
+            })
+            frameInst.title = frameInst.title + " (route, from action)"
             //=
         }
     }
