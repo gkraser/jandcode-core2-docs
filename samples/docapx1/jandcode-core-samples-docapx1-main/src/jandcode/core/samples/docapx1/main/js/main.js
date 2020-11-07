@@ -14,6 +14,10 @@ export function run() {
             path: '/frames/withparams/:id/:code',
             frame: 'jandcode/core/samples/docapx1/main/js/frames/ShowFrameWithParams.vue'
         },
+        {
+            path: '/frames/dialog1',
+            frame: 'jandcode/core/samples/docapx1/main/js/frames/ShowDialog.vue'
+        },
     ]
 
     apx.app.run(() => {

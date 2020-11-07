@@ -33,6 +33,8 @@
                     <jc-side-menu-item label="Показ фрейма с параметрами (route)"
                                        icon="frame"
                                        @click="routeShowFrame1()"/>
+                    <jc-side-menu-item label="Показ диалога" icon="frame"
+                                       @click="sr('/frames/dialog1')"/>
                 </jc-side-menu-item>
             </jc-side-menu>
         </template>
@@ -89,7 +91,7 @@ export default {
          * @param routePath путь, который распознается роутингом.
          * @param params параметры. Могут отсутствовать
          */
-        rt(routePath, params) {
+        sr(routePath, params) {
             apx.showFrame({
                 frame: routePath,
                 params: params

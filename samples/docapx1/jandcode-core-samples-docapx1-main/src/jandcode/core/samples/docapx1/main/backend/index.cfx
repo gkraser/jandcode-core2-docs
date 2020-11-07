@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <dao>
+        <daoHolder name="api">
+            <item name="dummy"
+                  class="jandcode.core.samples.docapx1.main.backend.dao.DummyDao"/>
+        </daoHolder>
+    </dao>
+
+</root>

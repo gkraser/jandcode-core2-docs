@@ -10,4 +10,6 @@
 
     </web>
 
+    <x-include path="backend/index.cfx"/>
+
 </root>
