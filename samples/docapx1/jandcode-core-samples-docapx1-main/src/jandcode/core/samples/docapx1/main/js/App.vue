@@ -25,6 +25,12 @@
                     <jc-side-menu-item label="Собственный глобальный декоратор"
                                        icon="frame"
                                        @click="sf('PageWarningDecor')"/>
+                    <jc-side-menu-item label="Показ фрейма с параметрами (Promise)"
+                                       icon="frame"
+                                       @click="promiseShowFrame1()"/>
+                    <jc-side-menu-item label="Показ фрейма с параметрами (async)"
+                                       icon="frame"
+                                       @click="asyncShowFrame1()"/>
                 </jc-side-menu-item>
             </jc-side-menu>
         </template>
@@ -72,6 +78,37 @@ export default {
                 frame: baseFramePath + shortName + ".vue",
                 params: params
             })
+        },
+
+        promiseShowFrame1() {
+            //= promiseShowFrame1
+            apx.showFrame({
+                frame: baseFramePath + "ShowFrameWithParams.vue",
+                params: {
+                    internal: {
+                        param2: 1
+                    },
+                    param1: 'promise'
+                }
+            }).then(function(frameInst) {
+                frameInst.title = frameInst.title + " (promise)"
+            })
+            //=
+        },
+
+        async asyncShowFrame1() {
+            //= asyncShowFrame1
+            let frameInst = await apx.showFrame({
+                frame: baseFramePath + "ShowFrameWithParams.vue",
+                params: {
+                    internal: {
+                        param2: 1
+                    },
+                    param1: 'async'
+                }
+            })
+            frameInst.title = frameInst.title + " (async)"
+            //=
         }
     }
 }

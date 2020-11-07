@@ -106,10 +106,47 @@ export default {
 Кроме того, можно ваши декораторы зарегистрировать глобально для всех фреймов:
 
 ```js
-apx.frame.componentHolder.set('frame.PageMyDecor', MyDecorFrame)
+apx.frame.componentHolder.set('frame.PageMyDecor', MyDecorPage)
 ```
 
 Теперь у любого фрейма будет зарегистрован компонент `PageMyDecor`,
 который можно использовать как декоратор.
 
+Так же можно и полностью заменить стандартные декораторы `Page` и `Dialog`
+на собственные:
+
+```js
+apx.frame.componentHolder.set('frame.Page', MyDecorPage)
+apx.frame.componentHolder.set('frame.Dialog', MyDecorDialog)
+```                                                        
+
+После этого все фреймы с радостью будут использовать эти декораторы.
+
+Показ фрейма
+------------
+
+Функция `apx.showFrame` показывает фрейм как страницу в "main".
+
+```js
+apx.showFrame({
+    frame: FRAME,
+    params: {PARAMS},
+})
+``` 
+
+Параметры:
+* `frame` - какой фрейм нужно показать. Может быть именем модуля с компонентом vue,
+  компонентом vue, функцией, путем в роутинге
+* `params` - произвольные параметры, которые будут переданы фрейму. Может отсутствовать.
  
+Функция `apx.showFrame` асинхронная. Она возвращает Promise, который ресолвится экземпляром
+фрейма после показа. Поэтому можно использовать так:
+
+@@code file=samples/docapx1/js/App.vue
+    part=promiseShowFrame1
+
+Или так:
+
+@@code file=samples/docapx1/js/App.vue
+    part=asyncShowFrame1
+
