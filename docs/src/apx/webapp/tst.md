@@ -68,13 +68,13 @@ dev-режиме.
 например:
 
 @@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/Vue1.test.vue
-    lang=html title=Vue1.test.vue
+    title=Vue1.test.vue
     
 Кроме того, vue-компонент можно рендерить в контексте вашего приложения,
 что бы он мог пользоватся данными и функционалом приложения:
 
 @@code file=samples/apx-app-template/xxx-yyy-main/src/xxx/yyy/main/_tst/_prototype/InAppVue1.test.vue
-    lang=html title=InAppVue1.test.vue
+    title=InAppVue1.test.vue
     
 ### **/*.html.gsp
 

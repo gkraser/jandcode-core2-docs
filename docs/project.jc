@@ -34,10 +34,18 @@ class P extends ProjectScript {
                     "**/temp/**/*", "**/temp",
                     "**/_jc/**/*", "**/_jc",
                     "**/out/**/*", "**/out",
+                    "**/node_modules/**/*", "**/node_modules",
             ]
+
+            def docapx1Project = wd("../samples/docapx1")
+            def docapx1Module = "${docapx1Project}/jandcode-core-samples-docapx1-main/src/jandcode/core/samples/docapx1/main"
+
             //
             addSrc('src')
             addSrc(apxProjectTemplate, resources: true, prefix: 'samples/apx-app-template',
+                    excludes: excludesTemp
+            )
+            addSrc(docapx1Module, resources: true, prefix: 'samples/docapx1',
                     excludes: excludesTemp
             )
 

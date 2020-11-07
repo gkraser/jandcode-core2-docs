@@ -5,6 +5,7 @@
         <toc topic="intro/intro">
             <toc topic="intro/install"/>
             <toc topic="intro/getstart"/>
+            <toc topic="intro/samples"/>
         </toc>
         <toc title="Модули">
             <include toc="apx/toc.xml"/>
