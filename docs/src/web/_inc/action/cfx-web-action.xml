@@ -3,6 +3,7 @@
     <web>
         <action name="NAME"
                 class="jandcode.core.web.action.BaseAction"
+                template="template/path.gsp"
         />
     </web>
 </root>

@@ -5,7 +5,6 @@
         <mount-module/>
 
         <action name="root"
-                class="jandcode.core.apx.web.action.ApxWebappAction"
                 template="jandcode/core/samples/docapx1/main/js/main.gsp"/>
 
     </web>

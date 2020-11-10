@@ -13,6 +13,7 @@ class P extends ProjectScript {
         project.version = include(GitVersion)
         //
         include(RootProject).with {
+            moduleGroup = "Docs"
             modules(
                     "jandcode-core-samples-docapx1-main",
             )
