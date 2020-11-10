@@ -149,6 +149,19 @@ class A1 {
 Начало фрагмента является концом предыдущего, поэтому если фрагменты идут один
 за другим, конец фрагмента можно не указывать.
 
+Если `PART-NAME` указан в формате `PART-NAME:PATH`, то фрагмент будет
+обернут в xml, который соответствует пути.
+
+Например для такого файла:
+
+@@code file=xml-part1.xml part=content-all
+
+Будут такие фрагменты:
+
+@@code file=xml-part1.xml part=node3 title=part=node3
+
+@@code file=xml-part1.xml part=node4 title=part=node4
+
 
 ### vue
 
@@ -156,6 +169,22 @@ class A1 {
 Текст фрагмента - тело соответсвующего раздела vue-файла.
 Внутри скриптов и шаблона можно определять свои фрагменты.
 В скрипте - по правилам фрагментов 'js', в шаблоне - по правилам фрагментов 'xml'.
+
+Например для такого файла:
+
+@@code file=vue-part1.vue part=content-all
+
+Будут такие фрагменты:
+
+@@code file=vue-part1.vue part=template title=template
+
+@@code file=vue-part1.vue part=script title=script
+
+@@code file=vue-part1.vue part=style title=style
+
+@@code file=vue-part1.vue part=data1 title=data1
+
+
 
 Генерация файлов для вставки {#gen}
 ----------------------------

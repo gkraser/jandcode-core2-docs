@@ -5,6 +5,7 @@
     <toc-root topic="./index.md">
         <toc topic="./frames"/>
         <toc topic="./**/*"/>
+        <toc topic="./tst"/>
     </toc-root>
 
 </root>
