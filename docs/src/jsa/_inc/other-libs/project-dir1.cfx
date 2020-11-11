@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <my-project mark="это каталог проекта">
+        <my-project-main mark="это каталог модуля">
+            <jc-data>
+                <webroot>
+                    <jslib mark="тут будут библиотеки">
+                        <ol mark="библиотека">
+                            <ol.js mark="файлы библиотеки"/>
+                            <ol.css/>
+                        </ol>
+                    </jslib>
+                </webroot>
+            </jc-data>
+            <src folder="true"/>
+            <test folder="true"/>
+            <project.jc/>
+        </my-project-main>
+        <project.jc/>
+    </my-project>
+
+
+</root>
