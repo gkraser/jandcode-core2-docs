@@ -36,6 +36,10 @@
                     <jc-side-menu-item label="Показ диалога" icon="frame"
                                        @click="sr('/frames/dialog1')"/>
                 </jc-side-menu-item>
+                <jc-side-menu-item label="Примеры" icon="frame">
+                    <jc-side-menu-item label="OpenLayers" icon="frame"
+                                       @click="sr('/examples/openLayers')"/>
+                </jc-side-menu-item>
             </jc-side-menu>
         </template>
 

@@ -5,8 +5,10 @@ import {DecorFrameWarning} from './components'
 
 export function run() {
 
-    // для просмотра api, который предоставляет apx
-    console.info("apx", apx);
+    if (Jc.cfg.envDev) {  // только в dev-режиме
+        // для просмотра api, который предоставляет apx
+        console.info("apx", apx);
+    }
 
     let routes = [
         {path: '', frame: Home},
@@ -20,7 +22,19 @@ export function run() {
         },
     ]
 
+    // перед тем, как приложение запустится
+    apx.app.onBeforeRun(async () => {
+        // загрузим routes
+        let res = await apx.daoApi.invoke("frames/routes")
+        routes.push(...res)
+    })
+
     apx.app.run(() => {
+
+        if (Jc.cfg.envDev) {
+            // для просмотра routes
+            console.info("routes", routes);
+        }
 
         apx.app.frameRouter.addRoutes(routes)
 
