@@ -1,6 +1,10 @@
 <template>
-    <Page>
-        <div ref="map1" style="width:800px;height:400px;"></div>
+    <Page body-fit>
+        <div class="col row bg-primary-100">
+            <div class="col" ref="map"></div>
+            <!-- следим за размером контейнера и перерисовываем карту: -->
+            <q-resize-observer @resize="onResize"/>
+        </div>
     </Page>
 </template>
 
@@ -18,8 +22,8 @@ export default {
     initFrame() {
     },
     mounted() {
-        let map = new ol.Map({
-            target: this.$refs.map1,
+        this.map = new ol.Map({
+            target: this.$refs.map,
             layers: [
                 new ol.layer.Tile({
                     source: new ol.source.OSM()
@@ -31,5 +35,12 @@ export default {
             })
         });
     },
+    methods: {
+        onResize(ev) {
+            if (this.map) {
+                this.map.updateSize()
+            }
+        }
+    }
 }
 </script>
