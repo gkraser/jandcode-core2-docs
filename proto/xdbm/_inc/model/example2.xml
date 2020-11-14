@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="my-model1">
+            <field name="name.long" parent="string" size="255"/>
+            <domain name="domain1">
+                <field name="f1" parent="string"/>
+                <field name="f2" parent="string"/>
+            </domain>
+            <domain name="domain2">
+                <field name="f1" parent="string"/>
+                <field name="f2" parent="string"/>
+            </domain>
+        </model>
+    </dbm>
+</root>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+
+        <!-- прототип модель -->
+        <model name="jandcode.examples5.dbm1" dbmode="solid">
+            <include name="jandcode.xdbm"/>
+            <x-include path="model/index.cfx"/>
+        </model>
+
+        <!-- экземпляр модели -->
+        <model name="default" instance="jandcode.examples5.dbm1">
+            <dbsource name="default" dbdriver="mysql"/>
+        </model>
+
+    </dbm>
+</root>

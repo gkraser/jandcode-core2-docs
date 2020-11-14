@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- module.cfx -->
+    <dbm>
+        <model name="default" instance="jandcode.examples5.dbm1">
+            <dbsource name="default" dbdriver="mysql"/>
+        </model>
+    </dbm>
+
+    <!-- app.cfx -->
+    <cfg>
+        <db name="default"
+            host="localhost"
+            database="jandcode_examples5_dbm1__DEV"
+            username="root"
+        />
+    </cfg>
+
+</root>
