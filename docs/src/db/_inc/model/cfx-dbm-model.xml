@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+
+        <!-- прототип модели -->
+        <model name="MODEL-NAME">
+            <include name="MODEL-NAME"/>
+            <x-include path="PATH"/>
+        </model>
+
+        <!-- экземпляр модели -->
+        <model name="MODEL-NAME" instance="MODEL-NAME">
+            <dbsource name="default" dbdriver="DRIVER-NAME"/>
+        </model>
+
+    </dbm>
+</root>

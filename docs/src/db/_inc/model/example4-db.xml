@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- module.cfx -->
+    <dbm>
+        <model name="default" instance="jandcode.examples5.dbm1">
+            <dbsource name="default" dbdriver="mariadb"/>
+        </model>
+    </dbm>
+
+    <!-- app.cfx -->
+    <cfg>
+        <dbsource name="default"
+                  host="localhost"
+                  database="jandcode_examples5_dbm1__DEV"
+                  username="root"
+        />
+    </cfg>
+
+</root>

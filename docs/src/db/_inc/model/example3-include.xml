@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="my-model1">
+        </model>
+        <model name="my-model2">
+        </model>
+        <model name="my-model3">
+            <include name="my-model1"/>
+        </model>
+        <model name="my-model4">
+            <include name="my-model1"/>
+            <include name="my-model3"/>
+        </model>
+        <model name="my-model5">
+            <include name="my-model2"/>
+            <include name="my-model4"/>
+        </model>
+
+        <model name="my-model6-inst" instance="my-model5">
+        </model>
+
+    </dbm>
+</root>
