@@ -2,12 +2,12 @@
 <root>
 
     <dao>
-        <daoHolder name="api">
+        <holder name="api">
             <item name="dummy"
                   class="jandcode.core.samples.docapx1.main.backend.dao.DummyDao"/>
             <item name="frames"
                   class="jandcode.core.samples.docapx1.main.backend.dao.FramesDao"/>
-        </daoHolder>
+        </holder>
     </dao>
 
 </root>
