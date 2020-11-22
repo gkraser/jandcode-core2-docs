@@ -8,4 +8,11 @@
 
     <x-depends module="jandcode.core.samples.docapx1.main"/>
 
+    <web>
+        
+        <action name="root"
+                template="jandcode/core/samples/docapx1/main/js/main.gsp"/>
+
+    </web>
+
 </root>
