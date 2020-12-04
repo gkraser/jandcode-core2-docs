@@ -4,6 +4,10 @@
     <web>
         <mount-module/>
 
+        <action name="docapx1/api"
+                class="jandcode.core.apx.web.action.ApiAction"
+                daoHolder="docapx1"/>
+
         <!-- = about:root/web -->
         <action name="about"
                 template="jandcode/core/samples/docapx1/main/js/pages/about.gsp"/>

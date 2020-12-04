@@ -25,7 +25,7 @@ export function run() {
     // перед тем, как приложение запустится
     apx.app.onBeforeRun(async () => {
         // загрузим routes
-        let res = await apx.daoApi.invoke("frames/routes")
+        let res = await apx.dao('docapx1/api').invoke("frames/routes")
         routes.push(...res)
     })
 

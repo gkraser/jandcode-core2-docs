@@ -28,13 +28,13 @@ export default {
                 onOk: async function(frameInst) {
                     let res
 
-                    res = await apx.daoApi.invoke("dummy/curTime", 100)
+                    res = await apx.dao('docapx1/api').invoke("dummy/curTime", 100)
                     console.info("res-1", res);
 
-                    res = await apx.daoApi.invoke("dummy/curTime", 100)
+                    res = await apx.dao('docapx1/api').invoke("dummy/curTime", 100)
                     console.info("res-2", res);
 
-                    res = await apx.daoApi.invoke("dummy/curTime", 100)
+                    res = await apx.dao('docapx1/api').invoke("dummy/curTime", 100)
                     console.info("res-3", res);
 
                     await apx.showError("Нажата ok, а ок нажимать нельзя")
