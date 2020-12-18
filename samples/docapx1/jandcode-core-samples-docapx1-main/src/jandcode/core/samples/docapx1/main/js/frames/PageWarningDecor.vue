@@ -12,7 +12,7 @@ export default {
     created() {
         this.title = 'Внимание'
     },
-    initFrame() {
+    frameInit() {
     },
     data() {
         return {}

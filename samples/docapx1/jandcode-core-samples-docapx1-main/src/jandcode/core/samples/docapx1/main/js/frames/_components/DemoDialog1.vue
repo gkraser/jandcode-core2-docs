@@ -14,7 +14,7 @@ export default {
     created() {
         this.title = 'DemoDialog'
     },
-    initFrame() {
+    frameInit() {
     },
     data() {
         return {}

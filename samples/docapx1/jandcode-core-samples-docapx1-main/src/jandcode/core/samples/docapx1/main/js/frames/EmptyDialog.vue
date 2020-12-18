@@ -13,7 +13,7 @@ export default {
     created() {
         this.title = 'Пустой диалог'
     },
-    initFrame() {
+    frameInit() {
     },
     data() {
         return {}

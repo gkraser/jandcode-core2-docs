@@ -19,7 +19,7 @@ export default {
     created() {
         this.title = 'OpenLayers'
     },
-    initFrame() {
+    frameInit() {
     },
     mounted() {
         this.map = new ol.Map({

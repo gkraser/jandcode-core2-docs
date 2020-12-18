@@ -15,7 +15,7 @@ export default {
     created() {
         this.title = 'Показ диалогов'
     },
-    initFrame() {
+    frameInit() {
     },
     data() {
         return {}

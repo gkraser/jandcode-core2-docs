@@ -32,7 +32,7 @@ export default {
             this.title = this.title + " (route, from address bar)"
         }
     },
-    initFrame() {
+    frameInit() {
     },
     data() {
         return {}
