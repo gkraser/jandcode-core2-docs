@@ -15,7 +15,7 @@
         </init-param>
         <init-param>
             <param-name>log</param-name>
-            <param-value>_logback.xml</param-value>
+            <param-value>true</param-value>
         </init-param>
         <init-param>
             <param-name>servlet.ref</param-name>
