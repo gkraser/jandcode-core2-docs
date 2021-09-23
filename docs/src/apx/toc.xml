@@ -4,7 +4,6 @@
     <!-- Основное содержание -->
     <toc-root topic="./index.md">
         <toc topic="./intro"/>
-        <include toc="apx/webui/toc.xml"/>
         <toc topic="./**/*"/>
     </toc-root>
 
