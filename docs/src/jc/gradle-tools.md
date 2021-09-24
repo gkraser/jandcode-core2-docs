@@ -47,7 +47,7 @@ class P extends ProjectScript {
 
 ```groovy
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
