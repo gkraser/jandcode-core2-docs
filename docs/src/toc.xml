@@ -15,6 +15,7 @@
             <include toc="web/toc.xml"/>
             <include toc="mdoc/toc.xml"/>
             <include toc="db/toc.xml"/>
+            <toc topic="modules/auth"/>
             <include toc="tutorial/toc.xml"/>
         </toc>
         <toc topic="./**/*"/>
