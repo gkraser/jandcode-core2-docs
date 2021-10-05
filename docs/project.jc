@@ -22,6 +22,9 @@ class P extends ProjectScript {
                     "jandcode-core-web",
                     "jandcode-core-jc",
                     "jandcode-core-auth",
+                    "jandcode-core-dbm",
+                    "jandcode-core-store",
+                    "jandcode-core-dao",
             )
         }
         //
