@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <dbm>
+        <model name="my-model">
+
+            <!-- структура словаря - это домен -->
+            <domain name="dict.my" parent="dict.base">
+                <field name="text2" parent="string"/>
+            </domain>
+
+            <!-- словарь -->
+            <dict name="mydict1" parent="base" domain="dict.my"
+                  handler="pak1.pak2.MyDict1_DictHandler"/>
+
+        </model>
+    </dbm>
+
+</root>
