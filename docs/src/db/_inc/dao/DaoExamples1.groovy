@@ -42,4 +42,32 @@ class DaoExamples1 extends BaseModelMember {
         StoreRecord rect = dao.record(10)
     }
 
+    void getInvoker1() {
+        DaoService daoSvc = getApp().bean(DaoService.class)
+
+        // глобально зарегистрированный invoker
+        DaoInvoker invokerGlobal = daoSvc.getDaoInvoker("invoker1")
+
+        // invoker модели с именем model1
+        DaoInvoker invokerModel1 = daoSvc.getDaoInvoker("model:model1")
+        // что соответствует:
+        invokerModel1 = getApp().bean(ModelService.class)
+                .getModel("model1").bean(ModelDaoService.class).getDaoInvoker()
+    }
+
+    void callDaoHolder1() {
+        DaoService daoSvc = getApp().bean(DaoService.class)
+
+        // получаем DaoHolder по имени
+        DaoHolder daoHolder = daoSvc.getDaoHolder("holder1")
+        // исполняем метод dao по имени
+        String res = (String) daoHolder.invokeDao("dao1/meth1", "param1")
+    }
+
+    void modelDaoHolder1() {
+        // берем сервис dao для модели
+        ModelDaoService daoSvc = getModel().bean(ModelDaoService.class)
+        // получаем хранилище dao
+        DaoHolder modelDaoHolder = daoSvc.getDaoHolder()
+    }
 }

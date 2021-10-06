@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <holder name="holder1" invoker="default">
+            <item name="dao1/meth1"
+                  class="pak1.pak2.DaoSimple1"
+                  method="meth1"
+                  invoker="default"/>
+        </holder>
+    </dao>
+</root>

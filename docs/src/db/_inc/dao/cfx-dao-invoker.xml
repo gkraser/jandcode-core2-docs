@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <invoker name="INVOKER-NAME"
+                 class="jandcode.core.dao.DefaultDaoInvoker">
+            <filter name="FILTER-NAME"
+                    weight="WEIGHT"
+                    class="jandcode.core.dao.DaoFilter"/>
+        </invoker>
+    </dao>
+</root>

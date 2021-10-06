@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="mymodel">
+            <dao>
+                <holder name="default">
+                    <item name="dao1"
+                          class="pak1.pak2.DaoSimple1"/>
+                    <item name="dao2"
+                          pak="pak1.pak2"
+                          recursive="true"/>
+                </holder>
+            </dao>
+        </model>
+    </dbm>
+</root>

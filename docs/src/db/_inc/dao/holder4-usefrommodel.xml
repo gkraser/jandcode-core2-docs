@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <holder name="holder1" invoker="default">
+            ...
+            <item name="i" prefix="mydb"
+                  provider="model" model="mymodel"/>
+        </holder>
+    </dao>
+</root>

@@ -2,7 +2,8 @@
 <root>
     <dbm>
         <model name="MODEL-NAME">
-            <dict name="NAME"
+            <dict name="DICT-NAME"
+                  parent="DICT-NAME"
                   domain="DOMAIN-NAME"
                   defaultField="FIELD-NAME"
                   handler="jandcode.core.dbm.dict.DictHandler"

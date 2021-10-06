@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <holder name="holder1" invoker="default">
+            <!-- = full -->
+            <item name="dao1/meth1"
+                  class="pak1.pak2.DaoSimple1"
+                  method="meth1"
+                  invoker="default"/>
+            <!-- = class -->
+            <item name="dao1"
+                  class="pak1.pak2.DaoSimple1"/>
+            <!-- = pak -->
+            <item name="dao1"
+                  pak="pak1.pak2"
+                  recursive="true"/>
+            <!-- = pak-flat -->
+            <item name="dao1"
+                  pak="pak1.pak2"
+                  flat="true"/>
+            <!-- = prefix -->
+            <item name="dao1"
+                  class="pak1.pak2.DaoSimple1"
+                  prefix="pfx"/>
+            <!-- = prefix-pak-flat -->
+            <item name="dao1"
+                  pak="pak1.pak2"
+                  flat="true"
+                  prefix="pfx1/pfx2"/>
+            <!-- = item-child -->
+            <item name="lev1">
+                <item name="lev2">
+                    <item name="dao1"
+                          class="pak1.pak2.DaoSimple1"/>
+                </item>
+            </item>
+            <!-- = provider -->
+            <item name="i" prefix="mydb"
+                  provider="model" model="mymodel"/>
+            <!-- = invoker -->
+            <item name="dao1"
+                  class="pak1.pak2.DaoSimple1"
+                  invoker="other1"/>
+            <!-- = invoker-rule -->
+            <rule name="rule1" mask="**/test*" invoker="t1"/>
+            <rule name="rule2" mask="**/*2*/**/*" invoker="x2"/>
+            <!-- = -->
+        </holder>
+    </dao>
+</root>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <holder name="holder1">
+            <item name="place1" provider="my1"/>
+        </holder>
+    </dao>
+</root>

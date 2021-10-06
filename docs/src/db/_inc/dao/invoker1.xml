@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dao>
+        <invoker name="invoker1">
+        </invoker>
+    </dao>
+</root>
