@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <cfg>
+        <section1 param1="1" param2="2"/>
+        <section2>
+            <section3 param3="3-${section1/param2}-${section1/param1}"/>
+        </section2>
+    </cfg>
+
+</root>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <bean name="pak1.pak2.MyCfg"
+          class="pak1.pak2.MyCfgImpl"/>
+</root>

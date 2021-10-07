@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <bean name="jandcode.core.std.CfgService">
+        <expand-rule
+                name="NAME"
+                mask="MASK"
+                ignore="true"/>
+    </bean>
+</root>
