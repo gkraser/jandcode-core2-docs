@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <web>
+        <mount-module/>
+
+        <action name="root"
+                template="jandcode/samples/nodejssimple1/main/main.gsp"/>
+
+    </web>
+
+</root>
