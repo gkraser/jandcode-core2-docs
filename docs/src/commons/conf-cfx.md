@@ -166,6 +166,19 @@
 @@code file=_utils/ConfUtils#confToText
     src=set1.cfx 
 
+### Функция: set-default
+
+Функция аналогична `set`, за исключением того, что значение переменной устанавливается
+только если у нее еще нет значения.
+
+@@code file=set2-default.cfx
+
+получаем:
+
+@@code file=_utils/ConfUtils#confToText
+src=set2-default.cfx
+
+
 ### Функция: if
 
 Загружает тело тега в объект, если соблюдается условие.
