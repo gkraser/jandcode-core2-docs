@@ -1,0 +1,10 @@
+{
+  "name": "jandcode-samples-jsmodules1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  }
+}

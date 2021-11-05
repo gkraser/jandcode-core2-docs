@@ -5,7 +5,7 @@ import jandcode.jc.*
 
 class Project1 extends ProjectScript {
 
-    void onInclude() throws Exception {
+    void onInclude() {
 
         // .....
 
