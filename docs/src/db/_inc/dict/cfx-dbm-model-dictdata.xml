@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="MODEL-NAME">
+            <dict name="DICT-NAME"
+                  handler="jandcode.core.dbm.dict.std.ConfDictHandler">
+                <dictdata>
+                    <i id="VALUE1" anyfield1="VALUE2"/>
+                    <i id="VALUE2" anyfield1="VALUE2"/>
+                    ...
+                </dictdata>
+            </dict>
+        </model>
+    </dbm>
+</root>

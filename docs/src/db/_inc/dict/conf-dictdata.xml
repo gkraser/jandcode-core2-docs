@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <dbm>
+        <model name="my-model">
+
+            <dict name="memdict1" parent="base"
+                  handler="jandcode.core.dbm.dict.std.ConfDictHandler">
+                <dictdata>
+                    <i id="1" text="YES"/>
+                    <i id="2" text="NO"/>
+                </dictdata>
+            </dict>
+
+        </model>
+    </dbm>
+
+</root>
