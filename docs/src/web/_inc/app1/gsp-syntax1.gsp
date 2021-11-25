@@ -1,6 +1,6 @@
-<%@ page import="jandcode.commons.*; jandcode.commons.groovy.*" %>
+<%@ page import="jandcode.commons.datetime.*; jandcode.commons.*; jandcode.commons.groovy.*" %>
 <%
-  def d = UtDateTime.create("2011-11-23")
+  def d = XDateTime.create("2011-11-23")
   def func1 = { p1 ->
     out("P1=${p1}")
   }
