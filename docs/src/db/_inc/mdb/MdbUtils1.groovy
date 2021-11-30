@@ -6,7 +6,7 @@ import jandcode.core.store.*
 class MdbUtils1 extends BaseMdbUtils {
 
     MdbUtils1(Mdb mdb) {
-        this.setMdb(mdb)
+        super(mdb)
     }
 
     Store load1(int param1) {
