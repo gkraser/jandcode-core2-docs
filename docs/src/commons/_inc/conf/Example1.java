@@ -12,13 +12,13 @@ public class Example1 {
     public void create1() throws Exception {
         //= create1
         // создание пустого объекта
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
 
         // создание из Map
         Map m = new HashMap();
         m.put("a", 1);
         m.put("b", 2);
-        Conf x1 = UtConf.create();
+        Conf x1 = Conf.create();
 
         //=
 

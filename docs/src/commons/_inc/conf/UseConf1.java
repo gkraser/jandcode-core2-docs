@@ -26,7 +26,7 @@ public class UseConf1 extends BaseCodeGen {
     private Conf loadConf(String fn) throws Exception {
         SourceFile sf = getSourceFile(fn);
         getOutFile().addDependFile(sf);
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         UtConf.load(x).fromString(sf.getText());
         return x;
     }
@@ -34,14 +34,14 @@ public class UseConf1 extends BaseCodeGen {
     //////
 
     public void create_empty() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
     }
 
     public void create_fromMap() throws Exception {
         Map m = new LinkedHashMap();
         m.put("a", 1);
         m.put("b", 2);
-        Conf x = UtConf.create(m);
+        Conf x = Conf.create(m);
         outText(prn(x));
     }
 
@@ -51,12 +51,12 @@ public class UseConf1 extends BaseCodeGen {
         lst.add("q1");
         lst.add(new HashMap<>());
         lst.add(Arrays.asList(1, 2));
-        Conf x = UtConf.create(lst);
+        Conf x = Conf.create(lst);
         outText(prn(x));
     }
 
     public void set_simple() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         x.setValue("a", 1);
         x.put("b", 2);
         outText(prn(x));
@@ -74,7 +74,7 @@ public class UseConf1 extends BaseCodeGen {
     }
 
     public void path1() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         x.setValue("a/b/c", 1);
         x.setValue("a/b/d", 2);
         outText(prn(x));
@@ -83,14 +83,14 @@ public class UseConf1 extends BaseCodeGen {
     }
 
     public void value_conf1() throws Exception {
-        Conf x = UtConf.create();
-        x.setValue("a", UtConf.create());
+        Conf x = Conf.create();
+        x.setValue("a", Conf.create());
         outText(prn(x));
     }
 
     public void value_conf2() throws Exception {
-        Conf x = UtConf.create();
-        x.setValue("a", UtConf.create());
+        Conf x = Conf.create();
+        x.setValue("a", Conf.create());
         Conf x1 = x.getConf("a");
         x1.setValue("b", 2);
         outText(prn(x, "x"));
@@ -100,13 +100,13 @@ public class UseConf1 extends BaseCodeGen {
     }
 
     public void value_conf3_find() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         Conf x1 = x.findConf("a/b/c", true);
         outText(prn(x, "x"));
     }
 
     public void value_conf3_map_and_list() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
 
         Map m = new LinkedHashMap();
         m.put("a", 1);
@@ -120,29 +120,29 @@ public class UseConf1 extends BaseCodeGen {
     }
 
     public void noname1() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         x.setValue("#", 0);
         x.setValue("#", 1);
         outText(prn(x, "x"));
     }
 
     public void load1() throws Exception {
-        Conf x1 = UtConf.create();
+        Conf x1 = Conf.create();
         UtConf.load(x1).fromString("{\"a\":1}", "a.json");
         outText(prn(x1, "x"));
-        Conf x2 = UtConf.create();
+        Conf x2 = Conf.create();
         UtConf.load(x2).fromString("<root><b>2</b></root>", "a.cfx");
         outText(prn(x2, "x"));
-        Conf x3 = UtConf.create();
+        Conf x3 = Conf.create();
         UtConf.load(x3).fromString("<root><a z=\"3\">a</a><b>2</b></root>", "a.xml");
         outText(prn(x3, "x"));
     }
 
     public void join1() throws Exception {
-        Conf x = UtConf.create();
+        Conf x = Conf.create();
         x.setValue("a/b", 1);
 
-        Conf x1 = UtConf.create();
+        Conf x1 = Conf.create();
         x1.setValue("a/c", 2);
 
         x.join(x1);
