@@ -12,11 +12,11 @@
                   class="pak1.pak2.DaoSimple1"/>
             <!-- = pak -->
             <item name="dao1"
-                  pak="pak1.pak2"
+                  package="pak1.pak2"
                   recursive="true"/>
             <!-- = pak-flat -->
             <item name="dao1"
-                  pak="pak1.pak2"
+                  package="pak1.pak2"
                   flat="true"/>
             <!-- = prefix -->
             <item name="dao1"
@@ -24,7 +24,7 @@
                   prefix="pfx"/>
             <!-- = prefix-pak-flat -->
             <item name="dao1"
-                  pak="pak1.pak2"
+                  package="pak1.pak2"
                   flat="true"
                   prefix="pfx1/pfx2"/>
             <!-- = item-child -->

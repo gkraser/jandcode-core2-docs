@@ -7,7 +7,7 @@
                     <item name="dao1"
                           class="pak1.pak2.DaoSimple1"/>
                     <item name="dao2"
-                          pak="pak1.pak2"
+                          package="pak1.pak2"
                           recursive="true"/>
                 </holder>
             </dao>
