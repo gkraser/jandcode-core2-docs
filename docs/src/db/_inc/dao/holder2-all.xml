@@ -7,8 +7,13 @@
                   class="pak1.pak2.DaoSimple1"
                   method="meth1"
                   invoker="default"/>
+            <!-- = class-methods -->
+            <item name="i" prefix="dao1"
+                  class="pak1.pak2.DaoSimple1"
+                  method="*"
+                  invoker="default"/>
             <!-- = class -->
-            <item name="dao1"
+            <item name="i" prefix="dao1"
                   class="pak1.pak2.DaoSimple1"/>
             <!-- = pak -->
             <item name="dao1"
@@ -18,6 +23,10 @@
             <item name="dao1"
                   package="pak1.pak2"
                   flat="true"/>
+            <!-- = pak-skip-used -->
+            <item name="dao1"
+                  class="pak1.pak2.DaoSimple1"
+                  skipUsed="true"/>
             <!-- = prefix -->
             <item name="dao1"
                   class="pak1.pak2.DaoSimple1"
