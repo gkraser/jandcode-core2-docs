@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- Простая таблица-словарь.
+
+        Поле id наследуется от предка: parent="id"
+
+        tag.db="true"
+
+    -->
+    <domain name="simple_dict" parent="id" title="Простой словарь" tag.db="true">
+        <!--@ Это таблица - простой словарь.
+              Этот коментарий - описание таблицы.
+        -->
+        <field name="name" parent="string" size="30" title="Наименование">
+            <!--@
+                Это подробное описание конкретного поля.
+            -->
+        </field>
+        <field name="code" parent="string" size="10" title="Код"/>
+    </domain>
+
+</root>

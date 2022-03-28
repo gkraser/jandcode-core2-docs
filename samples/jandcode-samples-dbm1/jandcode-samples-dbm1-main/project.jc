@@ -1,0 +1,25 @@
+import jandcode.jc.*
+import jandcode.jc.std.*
+
+class P extends ProjectScript {
+
+    static beforeLoad = {
+    }
+
+    void onInclude() {
+        //
+        project.name = "jandcode-samples-dbm1-main"
+        //
+        include(JavaProject).with {
+            moduleDef("jandcode.samples.dbm1.main").with {
+                depends.prod(
+                    "jandcode.core.apx",
+                    "jandcode.core.db.postgresql",
+                )
+                depends.dev(
+                )
+            }
+        }
+    }
+
+}

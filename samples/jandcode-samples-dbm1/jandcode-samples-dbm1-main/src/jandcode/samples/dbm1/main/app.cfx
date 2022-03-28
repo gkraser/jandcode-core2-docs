@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <app
+            title="JandcodeSamplesDbm1"
+            mainmodule="jandcode.samples.dbm1.main"
+    />
+
+    <x-depends module="jandcode.samples.dbm1.main"/>
+
+</root>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <web>
+        <mount-module/>
+    </web>
+
+    <dbm>
+
+        <!-- описание модели базы данных -->
+        <model name="jandcode.samples.dbm1.model">
+            <include name="apx.base"/>
+            <x-include path="model/index-model.cfx"/>
+
+            <dbsource name="default"
+                      dbdriver="postgresql"
+            />
+        </model>
+
+        <!-- =================== -->
+
+        <!-- экземпляр модели jandcode.samples.dbm1.model с именем "default" -->
+        <model name="default" instance="jandcode.samples.dbm1.model"/>
+
+    </dbm>
+
+</root>

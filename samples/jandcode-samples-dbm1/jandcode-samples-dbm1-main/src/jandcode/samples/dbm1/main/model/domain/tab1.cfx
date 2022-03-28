@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <domain name="tab1" parent="id" tag.db="true"
+            title="Таблица 1">
+        <!--@
+            Это таблица 1, она содержит все возможные типы полей.
+        -->
+
+        <field name="f_string" parent="string" size="30"
+               title="Строковое поле">
+            <!--@
+                В таком коментарии можно описывать подробности для
+                конкретного поля.
+            -->
+        </field>
+
+        <field name="f_boolean" parent="boolean"
+               title="Логическое поле">
+        </field>
+
+        <field name="f_datetime" parent="datetime"
+               title="Поле с датой и временем">
+        </field>
+
+        <field name="f_date" parent="date"
+               title="Поле только с датой">
+        </field>
+
+        <field name="f_int" parent="int"
+               title="Поле integer">
+        </field>
+
+        <field name="f_smallint" parent="smallint"
+               title="Поле smallint">
+        </field>
+
+        <field name="f_long" parent="long"
+               title="Поле long (bigint)">
+        </field>
+
+        <field name="f_ref_simple_dict_1" parent="simple_dict/ref"
+               title="Ссылка на поле из другой таблицы">
+        </field>
+
+        <field name="f_ref_simple_dict_2" parent="simple_dict/ref"
+               title="Еще одна ссылка на поле из другой таблицы">
+        </field>
+
+        <field name="f_memo" parent="memo"
+               title="Поле с длинным текстом">
+        </field>
+
+        <field name="f_blob" parent="blob"
+               title="Бинарное поле">
+        </field>
+
+    </domain>
+
+
+</root>

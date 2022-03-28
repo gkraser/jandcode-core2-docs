@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- таблица для проверки генерации документации: отсутвуют title и коментарии-->
+    <domain name="tab2" parent="id" tag.db="true">
+        <field name="f_string" parent="string" size="30">
+        </field>
+        <field name="f_boolean" parent="boolean">
+        </field>
+    </domain>
+
+
+</root>
