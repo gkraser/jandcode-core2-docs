@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- таблица не включена в диаграммы -->
+    <domain name="tab3" parent="id" tag.db="true">
+        <field name="f_string" parent="string" size="30">
+        </field>
+    </domain>
+
+
+</root>

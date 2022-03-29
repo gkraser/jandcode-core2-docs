@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <diagram name="diagram1" title="Диаграмма 1">
+        <domain name="tab1"/>
+        <domain name="tab2"/>
+        <domain name="simple_dict"/>
+    </diagram>
+
+</root>

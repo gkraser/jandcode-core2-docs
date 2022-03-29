@@ -55,6 +55,10 @@
                title="Бинарное поле">
         </field>
 
+        <field name="f_parent" parent="tab1/ref"
+               title="Ссылка на себя">
+        </field>
+
     </domain>
 
 
