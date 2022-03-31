@@ -1,5 +1,6 @@
 package jandcode.samples.dbm1.main;
 
+import jandcode.commons.*;
 import jandcode.commons.named.*;
 import jandcode.core.apx.test.*;
 import jandcode.core.dbm.domain.*;
@@ -20,6 +21,19 @@ public class Domain_Test extends Apx_Test {
                 System.out.println("  " + field.getName() + ": " + field.getDbDataType().getName());
             }
         }
+    }
+
+    /**
+     * Конфигурация домена
+     */
+    @Test
+    public void domain_conf() throws Exception {
+        DomainService domainSvc = getModel().bean(DomainService.class);
+        Domain d = domainSvc.getDomain("tab1");
+
+        String s  = UtConf.save(d.getConf()).toString();
+        System.out.println(s);
+
     }
 
 
