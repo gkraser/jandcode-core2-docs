@@ -64,6 +64,12 @@
                title="Ссылка на себя">
         </field>
 
+        <field name="f_parent_auto_title" parent="tab1/ref">
+        </field>
+
+        <field name="f_ref_auto_title" parent="simple_dict/ref">
+        </field>
+
     </domain>
 
 
