@@ -4,4 +4,7 @@
     <x-include path="domain/**/*.cfx"/>
     <x-include path="diagram/**/*.cfx"/>
 
+    <verdb-module name="default" module="jandcode.samples.dbm1.model"
+                  path="jc-data:verdb/jandcode.samples.dbm1.model"/>
+
 </root>
