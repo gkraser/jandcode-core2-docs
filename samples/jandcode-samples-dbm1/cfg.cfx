@@ -6,7 +6,7 @@
         <dbsource name="default"
                   dbdriver="postgresql"  
                   host="localhost"
-                  database="jandcode-samples-dbm1"
+                  database="jandcode_samples_dbm1"
                   username="user"
                   password="password"
         />

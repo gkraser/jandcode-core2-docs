@@ -1,9 +1,9 @@
 package jandcode.samples.dbm1.main;
 
 import jandcode.commons.cli.*;
+import jandcode.core.apx.cli.*;
 import jandcode.core.cli.*;
 import jandcode.core.web.cli.*;
-import jandcode.core.apx.cli.*;
 
 public class Main {
 
@@ -16,6 +16,7 @@ public class Main {
         z.addExtension(new AppCliExtension());
         z.addCmd("serve", new ServeCliCmd());
         z.addCmd("db-check", new DbCheckCliCmd());
+        z.addCmd("db-create", new DbCreateCliCmd());
         z.exec();
     }
 
