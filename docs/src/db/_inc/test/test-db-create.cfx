@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 
-    <x-depends module="jandcode.samples.dbm1.main"/>
-    <x-include path="#{appdir}/test-cfg.cfx"/>
-
     <test>
         <!-- Определение модели по умолчанию в тестах и указание,
              что базу данных нужно создавать, если она не существует.
@@ -12,7 +9,8 @@
         <dbm
                 model-default="default"
                 create-db="true"
-                create-db-struct="true"/>
+                create-db-struct="true"
+        />
     </test>
 
 </root>
