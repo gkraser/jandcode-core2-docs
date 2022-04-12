@@ -10,6 +10,7 @@
         <!-- описание модели базы данных -->
         <model name="jandcode.samples.dbm1.model">
             <include name="apx.base"/>
+            <include name="jandcode.core.dbm.genid"/>
             <x-include path="model/index-model.cfx"/>
 
             <dbsource name="default"

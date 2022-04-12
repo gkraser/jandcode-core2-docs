@@ -4,6 +4,9 @@
     <dbm>
         <model name="my-model">
 
+            <!-- подключаем реализацию генераторов -->
+            <include name="jandcode.core.dbm.genid"/>
+
             <domain name="my_table_1" parent="id" tag.db="true"
                     genid.start="1000" genid.step="2">
             </domain>
