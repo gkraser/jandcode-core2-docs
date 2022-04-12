@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <dbm>
+        <model name="my-model">
+
+            <domain name="my_table_1" parent="id" tag.db="true"
+                    genid.start="1000" genid.step="2">
+            </domain>
+
+            <domain name="no_db_table" parent="id">
+            </domain>
+
+            <genid name="my_gen_1"/>
+            <genid name="my_gen_2" start="2000" step="1"/>
+
+        </model>
+    </dbm>
+
+</root>
