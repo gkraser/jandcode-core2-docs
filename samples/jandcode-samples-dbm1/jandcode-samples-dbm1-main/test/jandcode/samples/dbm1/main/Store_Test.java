@@ -39,6 +39,15 @@ public class Store_Test extends Dbm_Test {
 
         utils.outTable(st, 10);
 
+        //
+        stopwatch.start("scan");
+        for (StoreRecord rec : st) {
+            long id = rec.getLong("id");
+            String f1 = rec.getString("f1");
+            String f10 = rec.getString("f10");
+        }
+        stopwatch.stop("scan");
+
     }
 
 

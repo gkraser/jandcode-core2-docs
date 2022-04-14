@@ -7,4 +7,17 @@
         <domain name="simple_dict"/>
     </diagram>
 
+    <diagram name="diagram2" title="Диаграмма 2">
+        <!--@
+            Для диаграммы можно писать документацию.
+
+            В тексте описания можно использовать **markdown**.
+
+            * формат описан в документации, модуль `jandcode-mdoc`
+            * как то так
+        -->
+        <domain name="tab1"/>
+        <domain name="simple_dict"/>
+    </diagram>
+
 </root>
