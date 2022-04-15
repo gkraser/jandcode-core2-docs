@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <dbm>
+        <fixture-suite name="testdata">
+            <fixture-builder name="tab1"
+                             class="jandcode.samples.dbm1.main.fixture.Tab1_fixture"
+                             count="10"/>
+        </fixture-suite>
+    </dbm>
+
+</root>

@@ -25,4 +25,6 @@
 
     </dbm>
 
+    <x-include path="fixture/index.cfx"/>
+
 </root>
