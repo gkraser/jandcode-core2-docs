@@ -8,7 +8,7 @@ import jandcode.core.dbm.fixture.*
  */
 class Tab1_fixture extends BaseFixtureBuilder {
 
-    Rnd rnd = new Rnd(123)
+    Rnd rnd = Rnd.create(123)
 
     int count = 5
 
