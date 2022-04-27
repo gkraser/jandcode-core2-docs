@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="my-model">
+
+            <!-- скрипт из указанного файла -->
+            <ddl name="ddl.1"
+                 stage="afterTables"
+                 file="#{path}/script1.sql"/>
+
+            <!-- генерация скрипта с помощью gsp -->
+            <ddl name="ddl.2"
+                 stage="tables"
+                 file="#{path}/script1.gsp"/>
+
+            <!-- генерация ddl с помощью ddl-провайдера -->
+            <ddl name="ddl.3"
+                 stage="afterTables"
+                 class="jandcode.core.dbm.ddl.DDLProvider"/>
+
+        </model>
+    </dbm>
+</root>

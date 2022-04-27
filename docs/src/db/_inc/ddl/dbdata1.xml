@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <dbm>
+        <model name="my-model">
+
+            <ddl name="dbdata.system"
+                 class="jandcode.core.dbm.dbdata.DDLProvider_dbdata"
+                 stage="data"
+                 path="#{path}/dbdata/*.*"/>
+
+        </model>
+    </dbm>
+</root>
