@@ -53,6 +53,8 @@
             <!-- = invoker-rule -->
             <rule name="rule1" mask="**/test*" invoker="t1"/>
             <rule name="rule2" mask="**/*2*/**/*" invoker="x2"/>
+            <!-- = include -->
+            <include name="dao-holder-name"/>
             <!-- = -->
         </holder>
     </dao>
