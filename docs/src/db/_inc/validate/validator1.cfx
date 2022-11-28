@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+
+    <!-- = validator1 -->
+    <dbm>
+        <model name="my-model">
+            <validator name="mycheck1"
+                       class="my.pak1.Validator_mycheck1"
+                       attr1="1"/>
+        </model>
+    </dbm>
+
+    <!-- = domain1 -->
+    <dbm>
+        <model name="my-model">
+            <domain name="MyDomain1">
+
+                <!-- валидаторы записи -->
+
+                <!-- mycheck1 - имя зарегистрированного валидатора
+                     атрибуты перекрывают атрибуты, указанные при регистрации валидатора
+                -->
+                <validator name="mycheck1" attr1="2"/>
+
+                <!-- mycheck1 - имя зарегистрированного валидатора,
+                     в этом случае имя узла может быть произвольным
+                 -->
+                <validator name="any-name" validator="mycheck1"/>
+
+                <!-- валидаторы для полей указываются внутри тега поля
+                     для таких валидаторов дополнительно ставится атрибут field,
+                     с именем поля, где валидатор используется
+                -->
+                <field name="f1">
+                    <validator name="mycheck1" attr1="2"/>
+                    <validator name="any-name" validator="mycheck1"/>
+                </field>
+
+                <!-- можно описывать валидаторы для поля вне поля,
+                     для этого просто укажите в атрибуте field для какого поля
+                     этот валидатор
+                 -->
+                <validator name="any-name" validator="mycheck1" field="f1"/>
+
+            </domain>
+        </model>
+    </dbm>
+
+    <!-- = -->
+
+</root>
